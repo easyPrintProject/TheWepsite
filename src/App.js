@@ -1,46 +1,38 @@
 
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/header"
-import {
-    MDBNavbar,
-    MDBNavbarNav,
-    MDBNavbarItem,
-    MDBNavbarLink,
-    MDBContainer,
-    MDBNavbarToggler,
-    MDBIcon } from 'mdb-react-ui-kit';
+import Home from "./home"
+import About from "./about"
+import Pricing from "./pricing"
+import Login from "./login"
+import Register from "./register"
+import  Features from "./features"
+
+
+
+
 
 function App() {
   return (
-    <header>
-    <Header />
+    <Router>
+     <Header/>
+     <Switch>
 
-    <div
-      className='p-5 text-center bg-image'
-      style={{ backgroundImage: "url('https://i.pinimg.com/originals/89/23/a2/8923a220c509f3e1a69af46b3588434e.jpg')", height: 600 }}
-    >
-      <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>
-        <div className='d-flex justify-content-center align-items-center h-100'>
-          <div className='text-white'>
-            <h1 className='mb-3'>Easy Print</h1>
-            <h4 className='mb-3'> الطباعة السهلة</h4>
-            <a className='btn btn-outline-light btn-lg' href='#!' role='button'>
-              ابدأ الآن
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <p className='mt-4'>Scroll down</p>
-    <p>Scroll down</p>
-    <p>Scroll down</p>
-    <p>Scroll down</p>
-    <p>Scroll down</p>
-    <p>Scroll down</p>
-    <p>Scroll down</p>
-    <p>Scroll down</p>
-  </header>
+        <Route path="/Login">  <Login/>  </Route>
+        <Route path="/Register">  <Register/>  </Route>
+        <Route path="/Pricing">  <Pricing />   </Route>
+        <Route path="/About">  <About />    </Route>
+        <Route path="/Features">  <Features />    </Route>
+        <Route path="/">  <Home />   </Route>
+         
+
+    </Switch>
+</Router>
+ 
+
+   
   
   );
 }
