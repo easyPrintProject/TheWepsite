@@ -24,7 +24,7 @@ function header() {
         <div className='collapse navbar-collapse' id='navbarExample01'>
           <MDBNavbarNav right  className='mb-2 mb-lg-0'>
             <MDBNavbarItem >
-              <MDBNavbarLink aria-current='page' href='#'>
+              <MDBNavbarLink aria-current='page' href='/'>
                 الصفحة الرئيسية
               </MDBNavbarLink>
             </MDBNavbarItem>
@@ -32,10 +32,10 @@ function header() {
               <MDBNavbarLink href='#'>المميزات</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='#'>الأسعار</MDBNavbarLink>
+              <MDBNavbarLink href='/Pricing'>الأسعار</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='#'>المزيد عنا</MDBNavbarLink>
+              <MDBNavbarLink href='/About'>المزيد عنا</MDBNavbarLink>
             </MDBNavbarItem>
 
           </MDBNavbarNav>
