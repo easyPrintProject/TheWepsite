@@ -1,25 +1,54 @@
 .base-container {
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  
+
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+
+
+.step{
+margin-top: 50px;
+
 }
-
-
-
-  
 .header {
-      font-size: 50px;
-      text-align: center;
-      align-items: center;
-
-    }
-  .sub-header{
-    font-size: 25px;
+    font-size: 50px;
+    margin-top: 100px;
     text-align: center;
-
+    align-items: center;
 
   }
+.sub-header{
+  font-size: 25px;
+  text-align: center;
+
+
+}
+  .content {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-align: right;
+    display: flex;
+    text-align: right;
+  }
+
+    
+
+  .footer {
+    margin-top: 3em;
+    align-items: center;
+    text-align: center;
+  }
+
+
   .sub-header2{
     text-align: center;
     color:cadetblue;
@@ -39,46 +68,29 @@
         
         
       }
-  
-      .form {
-        margin-top: 2em;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-      }
 
-        .form-group {
-          display: flex;
-          flex-direction: column;
-          align-items: right;
-          width: fit-content;
-          text-align: right;
-         
-        }
-          input {
-              
-              
-            margin-top: 6px;
-            min-width: 18em;
-            height: 37px;
-            padding: 0px 10px;
-            font-size: 16px;
-            text-align: right;
-            background-color: #f3f3f3;
-            border: 0;
-            border-radius: 4px;
-            margin-bottom: 31px;
-            transition: all 250ms ease-in-out;
-          }
-         
-        
-      
-    
   
-    .footer {
-      margin-top: 3em;
-      text-align: center;
-    }
+  .header2{
+    font-size: 30px;
+    align-items: center;
+    margin-top: 100px;
+    text-align: center;
+    align-items: center;
+  }
+.checkbox{
+  justify-content: center;
+  display: flex;
+  align-items: right;
+  text-align: right;
+  flex-direction: row-reverse;
 
+}
+ label {
+  flex-direction: row-reverse;
+  text-align: left;
+
+}
+  
+
+ 
    
