@@ -5,7 +5,7 @@ import { MDBProgress, MDBProgressBar } from 'mdb-react-ui-kit';
 import {Link } from "react-router-dom";
 
 
-function register() {
+function address() {
 
 
     return (
@@ -14,14 +14,12 @@ function register() {
         <div >
              <div >
  <MDBProgress className='step'>
-        <MDBProgressBar striped animated width='33' valuemin={0} valuemax={100} />
+        <MDBProgressBar striped animated width='100' valuemin={0} valuemax={100} />
       </MDBProgress>
          </div>
             <div>
-                <h1 className='header'> الانضمام كمقدم خدمة</h1>
-                <h2 className='sub-header'>خاص بشركات ومؤسسات الطباعة والنسخ والتصوير
-    </h2></div>
-   
+                <h1 className='header'> عنوان المكتبة</h1>
+             
             <div className="content">
                 <form 
                 >
@@ -29,18 +27,16 @@ function register() {
                     <div >
                     <MDBRow>
                         <MDBCol size="6"> <label>
-                            رقم التواصل
-              </label>
+المدينة              </label>
                             <input
-                                type="phone"
+                                type="text"
                                 className="form-control"
                                 required
                             />
                         </MDBCol>
 
                         <MDBCol size="6" > <label>
-                            الاسم
-              </label>
+الدولة              </label>
                             <input
                                 type="text"
                                 className="form-control"
@@ -49,7 +45,7 @@ function register() {
                     </MDBRow>
                     <MDBRow>
                         <MDBCol size="6"> <label>
-                            البريد الإلكتروني              </label>
+الشارع           </label>
                             <input
                                 type="email"
                                 className="form-control"
@@ -58,8 +54,7 @@ function register() {
                         </MDBCol>
 
                         <MDBCol size="6"> <label>
-                            الاسم التجاري
-              </label>
+الحي              </label>
                             <input
                                 type="text"
                                 className="form-control"
@@ -69,9 +64,9 @@ function register() {
 
                     <MDBRow>
                         <MDBCol size="6"> <label>
-                            كلمة السر              </label>
+الرمز البريدي              </label>
                             <input
-                                type="password"
+                                type="text"
                                 className="form-control"
                                 required
                                 //onChange = {(event,newValue) => this.setState({password:newValue})}  
@@ -79,7 +74,7 @@ function register() {
                         </MDBCol>
 
                         <MDBCol size="6"> <label>
-                            المدينة              </label>
+العنوان              </label>
                             <input
                                 type="text"
                                 className="form-control"
@@ -89,15 +84,15 @@ function register() {
                     <div className="footer">
                     <Link to="/isCourses">
       <button type="button" className="btn" color="black">
-        إرسال طلب
-      </button></Link>
+المتابعة      </button></Link>
     </div>
 
 
                 </form>
             </div>
         </div>
+        </div>
     );
 
 }
-export default register;
+export default address;

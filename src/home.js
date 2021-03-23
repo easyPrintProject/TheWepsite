@@ -1,6 +1,5 @@
 import React from 'react'
 import { MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardGroup } from 'mdb-react-ui-kit';
-import { Link } from "react-router-dom";
 
 
 function home() {
@@ -15,10 +14,9 @@ function home() {
           <div className='text-white'>
             <h1 className='mb-3'>Easy Print</h1>
             <h4 className='mb-3'> الطباعة السهلة</h4>
-            <Link to ="./Register">
-            <a className='btn btn-outline-light btn-lg' href='./Login' role='button'>
+            <a className='btn btn-outline-light btn-lg' href='#!' role='button'>
               ابدأ الآن
-            </a></Link>
+            </a>
           </div>
         </div>
       </div>

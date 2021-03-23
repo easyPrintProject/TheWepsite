@@ -1,6 +1,8 @@
-import React from 'react'
 
-function features() {
+import React from 'react'
+import {Link } from "react-router-dom";
+
+function dashboard() {
     return (
         <div>
             
@@ -8,4 +10,4 @@ function features() {
     )
 }
 
-export default features
+export default dashboard
