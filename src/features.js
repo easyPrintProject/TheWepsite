@@ -1,10 +1,10 @@
 import React from 'react'
 
+
+
 function features() {
     return (
-        <div>
-            
-        </div>
+        <div></div>
     )
 }
 
