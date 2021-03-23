@@ -6,19 +6,19 @@ import {MDBIcon } from 'mdb-react-ui-kit';
   import './adressInfo.css';
 
 function AdressInfo() {
-    const [fullName, setFullName] = React.useState("");
-    const [city, setCity ] = React.useState("");
-  
-    const [email, setEmail] = React.useState("");
-    const [password, setPassword] =  React.useState("");
-    const [phoneNumber, setPhoneNumber] =  React.useState("");
-    const [commercialName, setCommercialName] =  React.useState("");
-    const [user, setUser] =  React.useState({Email:"", UserName:"", PhoneNumber:"",  EmailConf:false, errorMassage:"", Id:"", Token:""});
-    const [errorMassage, setErrorMassage] =  React.useState("");
-    const [show, setShow] = useState(false);
+   //form states 
+    const [city, setCity] = React.useState("");
+    const [country, setCountry] =  React.useState("");
+    const [neighborhood, setNeighborhood] =  React.useState("");
+    const [street, setStreet] =  React.useState("");
+    const [adressLine, setAdressLine] =  React.useState();
+    const [postcode, setPostcode] =  React.useState("");
 
+    //modat states 
+    const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
       return (
             <div>
       <div className="header">الانضمام كمقدم خدمة</div>
@@ -49,28 +49,28 @@ function AdressInfo() {
   
           <div className="form-group">
             <label htmlFor="Name"> : الدولة </label>
-            <input type="text" name="Name" onChange={(e) => setFullName(e.target.value)} />
+            <input type="text" name="Name" onChange={(e) => setCountry(e.target.value)} />
           </div>
           <div className="form-group">
             <label htmlFor="Phone"  >: المدينة</label>
-            <input type="text" name="Phone"  onChange={(e) => setPhoneNumber(e.target.value)}  />
+            <input type="text" name="Phone"  onChange={(e) => setCity(e.target.value)}  />
           </div>
           <div className="form-group">
             <label htmlFor="Phone"  >:  الحي</label>
-            <input type="text" name="Phone"  onChange={(e) => setPhoneNumber(e.target.value)}  />
+            <input type="text" name="Phone"  onChange={(e) => setNeighborhood(e.target.value)}  />
           </div>
           <div className="form-group">
             <label htmlFor="Email" >: الشارع</label>
-            <input type="email" name="Eamil"  onChange={(e) => setEmail(e.target.value)}/>
+            <input type="email" name="Eamil"  onChange={(e) => setStreet(e.target.value)}/>
           </div>
           <div className="form-group">
             <label htmlFor="City" > : وصف لمعلم قريب</label>
-            <input type="text" name="City" onChange={(e) => setCity(e.target.value)} />
+            <input type="text" name="City" onChange={(e) => setAdressLine(e.target.value)} />
           </div> 
           <div className="form-group">
             <label htmlFor="password" >: صندوق بريد</label>
             <input type="password" name="password"
-              onChange={(e) => setPassword(e.target.value)}  />
+              onChange={(e) => setPostcode(e.target.value)}  />
           </div>
         </div>
       </div>
