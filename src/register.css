@@ -1,11 +1,17 @@
 .base-container {
+
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   
-}
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 
 
 .step{
@@ -33,6 +39,7 @@ margin-top: 50px;
     display: flex;
     text-align: right;
   }
+
     
 
   .footer {
@@ -40,6 +47,27 @@ margin-top: 50px;
     align-items: center;
     text-align: center;
   }
+
+
+  .sub-header2{
+    text-align: center;
+    color:cadetblue;
+  }
+    .content {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+    }
+    .steps-bar{
+      text-align: center;
+      justify-content: center;
+      width: 100%;
+    }
+      .image {
+        width: 21em;
+        
+        
+      }
 
   
   .header2{
