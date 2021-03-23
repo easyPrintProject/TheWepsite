@@ -8,6 +8,8 @@ import Pricing from "./pricing"
 import Login from "./login"
 import Register from "./register"
 import  Features from "./features"
+import PrintingShopInfo from "./PrintingShopInfo"
+import AdressInfo from "./AdressInfo"
 
 
 
@@ -25,6 +27,9 @@ function App() {
         <Route path="/Pricing">  <Pricing />   </Route>
         <Route path="/About">  <About />    </Route>
         <Route path="/Features">  <Features />    </Route>
+        <Route path="/PrintingShopInfo">  <PrintingShopInfo />    </Route>
+        <Route path="/AdressInfo">  <AdressInfo />    </Route>
+
         <Route path="/">  <Home />   </Route>
          
 
