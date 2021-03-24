@@ -10,6 +10,8 @@ import Register from "./register"
 import  Features from "./features"
 import PrintingShopInfo from "./PrintingShopInfo"
 import AdressInfo from "./AdressInfo"
+import ManageProduct from "./PrinterPages/ManageProduct"
+import EditPrintingServices from "./PrinterPages/EditPrintingServices"
 
 
 
@@ -29,6 +31,9 @@ function App() {
         <Route path="/Features">  <Features />    </Route>
         <Route path="/PrintingShopInfo">  <PrintingShopInfo />    </Route>
         <Route path="/AdressInfo">  <AdressInfo />    </Route>
+        <Route path="/ManageProduct">  <ManageProduct />    </Route>
+        <Route path="/EditPrintingServices">  <EditPrintingServices />    </Route>
+
 
         <Route path="/">  <Home />   </Route>
          

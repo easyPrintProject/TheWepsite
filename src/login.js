@@ -9,7 +9,7 @@ function Login() {
   // const [{ }, dispatch] = useStateValue("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState({Email:"", FullName:"", PhoneNumber:"",  EmailConf:false, errorMassage:"", Id:"", Token:""});
 
 
   // useEffect(() => {
@@ -26,14 +26,38 @@ function Login() {
   // }, [user]) //will only run when then app component loads
   
   const Login = async () => {
-    const requestOptions = {
-      mode: 'no-cors',
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', "Access-Control-Allow-Origin": "*" },
-      body: JSON.stringify({ Email: 'Ahmed@gmail.com', PasswordHash:"raghad221" })
-  };
-  fetch('https://localhost:44399/api/PrintingShopLogin', requestOptions)
-    
+    try {
+      fetch('https://localhost:44399/api/PrintingShopLogin', {
+       method: 'POST',
+       headers: {
+       Accept: 'application/json',
+        'Content-Type': 'application/json'
+            },
+      body: JSON.stringify({
+       Email:"Ahmed@gmail.com",
+       PasswordHash: "raghad221"
+       })
+     }).then((response) => response.json())
+     .then((response) => {
+       console.log(response.data);
+     setUser({
+      Email: response.data.email,
+      PhoneNumber: response.data.phoneNumber,
+      FullName:response.data.fullName, 
+      EmailConf:response.data.emailConfiremd,
+      errorMassage:response.data.errorMessage,
+      Id:response.data.id,
+      Token:response.data.token,
+              });
+     })
+     .catch((error) => {
+      console.error(error);
+    });
+     
+    } catch (error) {
+      console.log('حدث خطأ! ', error)
+    }
+    history.push("./EditPrintingServices")
   }
 
     return (
