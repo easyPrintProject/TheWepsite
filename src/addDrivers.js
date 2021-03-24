@@ -6,21 +6,10 @@ import {
   import { Link } from "react-router-dom";
 
 
-function Register() {
-  const [fullName, setFullName] = React.useState("");
-  const [city, setCity ] = React.useState("");
-
-  const [email, setEmail] = React.useState("");
-  const [password, setPassword] =  React.useState("");
-  const [phoneNumber, setPhoneNumber] =  React.useState("");
-  const [commercialName, setCommercialName] =  React.useState("");
-  const [user, setUser] =  React.useState({Email:"", UserName:"", PhoneNumber:"",  EmailConf:false, errorMassage:"", Id:"", Token:""});
-  const [errorMassage, setErrorMassage] =  React.useState("");
-  
+function features() {
     return (
-          <div>
-    <div className="header">الانضمام كمقدم خدمة</div>
-    <h2 className="sub-header">خاص بشركات ومؤسسات الطباعة والنسخ والتصوير</h2>
+        <div><h1 className="header"> أضافة سائق</h1>
+         <h2 className="sub-header">خاص بشركات ومؤسسات الطباعة والنسخ والتصوير</h2>
     <h5 className="sub-header2">معلومات مالك المطبعة</h5>
 
     <div className="content">
@@ -35,7 +24,7 @@ function Register() {
     </button>
     <MDBIcon className='ms-1 ' icon='arrow-left' size='lg' color="gray" />
 
-    <button style={{backgroundColor:"gray", marginRغight:10, marginLeft:10}} type="button" class="btn btn  btn-lg btn-floating" disabled>
+    <button style={{backgroundColor:"gray", marginRight:10, marginLeft:10}} type="button" class="btn btn  btn-lg btn-floating" disabled>
     <MDBIcon className='ms-1 ' icon='check' size='lg' color="white" />
     </button>
   
@@ -58,14 +47,7 @@ function Register() {
           <label htmlFor="Email" >البريد الإلكتروني</label>
           <input type="email" name="Eamil"  onChange={(e) => setEmail(e.target.value)}/>
         </div>
-        {/* <div className="form-group">
-          <label htmlFor="CoName"> الاسم التجاري</label>
-          <input type="text" name="CoName" onChange={(e) => setCommercialName(e.target.value)}/>
-        </div>
-        <div className="form-group">
-          <label htmlFor="City" > المدينة</label>
-          <input type="text" name="City" onChange={(e) => setCity(e.target.value)} />
-        </div> */}
+       
         <div className="form-group">
           <label htmlFor="password" > كلمة السر </label>
           <input type="password" name="password"
@@ -84,9 +66,8 @@ function Register() {
         التالي
       </button></Link>
     </div>
-  </div>   
-)
+  </div>  
+    )
 }
-  
 
-export default Register
+export default features

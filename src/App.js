@@ -10,7 +10,9 @@ import Register from "./register"
 import  Features from "./features"
 import PrintingShopInfo from "./PrintingShopInfo"
 import AdressInfo from "./AdressInfo"
+import AddDrivers from "./addDrivers"
 import PrintShopProfile from "./PrintShopProfile";
+
 
 
 
@@ -29,8 +31,8 @@ function App() {
         <Route path="/Features">  <Features />    </Route>
         <Route path="/PrintingShopInfo">  <PrintingShopInfo />    </Route>
         <Route path="/AdressInfo">  <AdressInfo />    </Route>
+        <Route path="/addDrivers">  <AddDrivers />    </Route>
         <Route path="/PrintShopProfile">  <PrintShopProfile />    </Route>
-
         <Route path="/">  <Home />   </Route>
          
 
