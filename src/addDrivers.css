@@ -1,0 +1,84 @@
+.base-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+  
+.header {
+      font-size: 50px;
+      text-align: center;
+      align-items: center;
+
+    }
+  .sub-header{
+    font-size: 25px;
+    text-align: center;
+
+
+  }
+  .sub-header2{
+    text-align: center;
+    color:cadetblue;
+  }
+    .content {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+    }
+    .steps-bar{
+      text-align: center;
+      justify-content: center;
+      width: 100%;
+    }
+      .image {
+        width: 21em;
+        
+        
+      }
+  
+      .form {
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+      }
+
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          align-items: right;
+          width: fit-content;
+          text-align: right;
+         
+        }
+          input {
+              
+              
+            margin-top: 6px;
+            min-width: 18em;
+            height: 37px;
+            padding: 0px 10px;
+            font-size: 16px;
+            text-align: right;
+            background-color: #f3f3f3;
+            border: 0;
+            border-radius: 4px;
+            margin-bottom: 31px;
+            transition: all 250ms ease-in-out;
+          }
+         
+        
+      
+    
+  
+    .footer {
+      margin-top: 3em;
+      text-align: center;
+    }
+
+   
