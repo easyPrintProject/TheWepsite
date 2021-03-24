@@ -13,6 +13,8 @@ import * as FiFeather from "react-icons/fi"
 
 
 const Data = [
+
+    
     {
  
       title: 'اضافة منتج',
@@ -63,7 +65,7 @@ function PrintShopProfile() {
     return (
         <div>
 <IconContext.Provider value={{ color: '#fff' }}>
-        <div className='navbar'>
+        <div >
           <Link to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
@@ -72,7 +74,6 @@ function PrintShopProfile() {
           <ul className='nav-menu-items' onClick={showSidebar}>
             <li className='navbar-toggle'>
               <Link to='#' className='menu-bars'>
-                <AiIcons.AiOutlineClose />
               </Link>
             </li>
             {Data.map((item, index) => {
