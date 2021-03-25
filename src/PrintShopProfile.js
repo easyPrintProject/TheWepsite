@@ -36,7 +36,7 @@ const Data = [
     },
     {
       title: 'اضافة مندوب',
-      path: '/addDelivery',
+      path: '/addDrivers',
      icon: <FiFeather.FiUserPlus />,
       cName: 'nav-text'
     },
