@@ -12,7 +12,7 @@ import PrintingShopInfo from "./PrintingShopInfo"
 import AdressInfo from "./AdressInfo"
 import AddDrivers from "./AddDrivers"
 import PrintShopProfile from "./PrintShopProfile";
-
+import Addcoupons from "./Addcoupons"
 
 
 
@@ -32,7 +32,8 @@ function App() {
         <Route path="/AdressInfo">  <AdressInfo />    </Route>
         <Route path="/PrintShopProfile">  <PrintShopProfile />    </Route>
         <Route path="/AddDrivers">  <AddDrivers />   </Route>
-         
+        <Route path="/Addcoupons">  <Addcoupons />   </Route>
+
 
     </Switch>
 </Router>
