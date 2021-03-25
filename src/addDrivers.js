@@ -6,7 +6,7 @@ import {
   import { Link } from "react-router-dom";
 
 
-function features() {
+function AddDrivers() {
     return (
         <div><h1 className="header"> أضافة سائق</h1>
          <h2 className="sub-header">خاص بشركات ومؤسسات الطباعة والنسخ والتصوير</h2>
@@ -70,4 +70,4 @@ function features() {
     )
 }
 
-export default features
+export default AddDrivers
