@@ -28,7 +28,7 @@ function header() {
         <div className='collapse navbar-collapse' id='navbarExample01'>
           <MDBNavbarNav right  className='mb-2 mb-lg-0'>
             <MDBNavbarItem >
-            <Link to="/">
+            <Link to="./home">
               <MDBNavbarLink aria-current='page' >
                 الصفحة الرئيسية
               </MDBNavbarLink></Link>

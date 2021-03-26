@@ -1,0 +1,24 @@
+  
+
+.base-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+.form {
+
+    font-size: 40px;
+ 
+  flex-direction: column;
+  align-items: right;
+}
+.form-group {
+  width: 100%;
+
+    
+   
+  }
+ 
+ 

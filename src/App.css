@@ -1,0 +1,10 @@
+.page-container{
+ flex-direction: column;
+ min-height: 100px;
+    display: flex;
+  
+}
+.content-wrap{
+    flex: 1;
+ 
+}
