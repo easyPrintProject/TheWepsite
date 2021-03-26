@@ -1,12 +1,18 @@
 import React, { useState } from "react";
-import './register.css';
+import './addDrivers.css';
+import { Button, Modal } from 'react-bootstrap';
 
 import {
   MDBIcon } from 'mdb-react-ui-kit';
   import { Link } from "react-router-dom";
 
 
-function AddDriver() {
+
+function AddDrivers() {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const [fullName, setFullName] = React.useState("");
   const [city, setCity ] = React.useState("");
 
@@ -16,36 +22,23 @@ function AddDriver() {
   const [commercialName, setCommercialName] =  React.useState("");
   const [user, setUser] =  React.useState({Email:"", UserName:"", PhoneNumber:"",  EmailConf:false, errorMassage:"", Id:"", Token:""});
   const [errorMassage, setErrorMassage] =  React.useState("");
+
     return (
         <div><h1 className="header"> أضافة سائق</h1>
          <h2 className="sub-header">خاص بشركات ومؤسسات الطباعة والنسخ والتصوير</h2>
-    <h5 className="sub-header2">معلومات مالك المطبعة</h5>
+  
 
     <div className="content">
-    <div className="steps-bar" >
-    <button style={{backgroundColor:"gray", marginRight:10, marginLeft:10}} type="button" class="btn btn  btn-lg btn-floating" disabled>
-    <MDBIcon className='ms-1 ' icon='check' size='lg' color="white" />
-    </button>
-    <MDBIcon className='ms-1 ' icon='arrow-left' size='lg' color="gray" />
-
-    <button style={{backgroundColor:"gray", marginRight:10, marginLeft:10}} type="button" class="btn btn  btn-lg btn-floating" disabled>
-    <MDBIcon className='ms-1 ' icon='check' size='lg' color="white" />
-    </button>
-    <MDBIcon className='ms-1 ' icon='arrow-left' size='lg' color="gray" />
-
-    <button style={{backgroundColor:"gray", marginRight:10, marginLeft:10}} type="button" class="btn btn  btn-lg btn-floating" disabled>
-    <MDBIcon className='ms-1 ' icon='check' size='lg' color="white" />
-    </button>
-  
-    
+    <div   className='p-5 text-center bg-image'
+      style={{ backgroundImage: "url('https://image.freepik.com/vetores-gratis/homem-dirigindo-uma-motocicleta-sobre-um-mapa-de-gps-em-um-telefone-inteligente-servico-de-entrega_211621-33.jpg')", height: 200,width:200,marginLeft:450 }}
+    >
 
     </div>
-      <div className="image">
-      </div>
+      
       <div className="form">
 
         <div className="form-group">
-          <label htmlFor="Name"> الاسم الكامل لمالك المطبعة</label>
+          <label htmlFor="Name"> الاسم الكامل  </label>
           <input type="text" name="Name" onChange={(e) => setFullName(e.target.value)} />
         </div>
         <div className="form-group">
@@ -70,13 +63,25 @@ function AddDriver() {
       </div>
     </div>
     <div className="footer">
-      <Link to="./PrintingShopInfo">
-      <button type="button" className="btn">
+      <button type="button" className="btn" onClick={handleShow}>
         التالي
-      </button></Link>
-    </div>
-  </div>  
+      </button>
+    <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>! تهانينا </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>تمت عمليت التسجيل بنجاح, سيتم مراجعة معلوماتك وتفعيل حسابك خلال 24 ساعة </Modal.Body>
+        <Modal.Footer>
+          <Button variant="success" onClick={handleClose}>
+            تم
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      </div>  
+      </div>  
     )
 }
 
-export default AddDriver
+
+export default AddDrivers
+

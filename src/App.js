@@ -12,11 +12,11 @@ import PrintingShopInfo from "./PrintingShopInfo"
 import AdressInfo from "./AdressInfo"
 import ManageProduct from "./PrinterPages/ManageProduct"
 import EditPrintingServices from "./PrinterPages/EditPrintingServices"
-import AddDrivers from "./AddDriver"
+import AddDrivers from "./addDrivers"
+
 import PrintShopProfile from "./PrintShopProfile";
-
-
-
+import Addcoupons from "./Addcoupons"
+import Product from "./Product"
 
 
 function App() {
@@ -31,13 +31,12 @@ function App() {
         <Route path="/Features">  <Features />    </Route>
         <Route path="/PrintingShopInfo">  <PrintingShopInfo />    </Route>
         <Route path="/AdressInfo">  <AdressInfo />    </Route>
-        <Route path="/ManageProduct">  <ManageProduct />    </Route>
-        <Route path="/EditPrintingServices">  <EditPrintingServices />    </Route>
         <Route path="/PrintShopProfile">  <PrintShopProfile />    </Route>
-        <Route path="/addDrivers">  <AddDrivers />    </Route>
-        <Route path="/PrintShopProfile">  <PrintShopProfile />    </Route>
+        <Route path="/AddDrivers">  <AddDrivers />   </Route>
+        <Route path="/Addcoupons">  <Addcoupons />   </Route> 
+        <Route path="/Product">  <Product />   </Route> 
         <Route path="/">  <Home />   </Route>
-         
+
 
     </Switch>
 </Router>
