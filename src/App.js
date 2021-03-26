@@ -42,7 +42,7 @@ function App() {
 
         Branchprinter
     </Switch>
-    {/* <Footer/> */}
+     <Footer/> 
 </Router>
  
 </div>
