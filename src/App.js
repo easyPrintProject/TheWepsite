@@ -12,7 +12,7 @@ import PrintingShopInfo from "./PrintingShopInfo"
 import AdressInfo from "./AdressInfo"
 import ManageProduct from "./PrinterPages/ManageProduct"
 import EditPrintingServices from "./PrinterPages/EditPrintingServices"
-import AddDrivers from "./addDrivers"
+import AddDrivers from "./AddDriver"
 import PrintShopProfile from "./PrintShopProfile";
 
 
@@ -23,9 +23,7 @@ function App() {
   return (
     <Router>
      <Header/>
-     <Switch>
-
-
+     <Switch>  
         <Route path="/Login">  <Login/>  </Route>
         <Route path="/Register">  <Register/>  </Route>
         <Route path="/Pricing">  <Pricing />   </Route>

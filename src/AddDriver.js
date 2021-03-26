@@ -6,7 +6,16 @@ import {
   import { Link } from "react-router-dom";
 
 
-function features() {
+function AddDriver() {
+  const [fullName, setFullName] = React.useState("");
+  const [city, setCity ] = React.useState("");
+
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] =  React.useState("");
+  const [phoneNumber, setPhoneNumber] =  React.useState("");
+  const [commercialName, setCommercialName] =  React.useState("");
+  const [user, setUser] =  React.useState({Email:"", UserName:"", PhoneNumber:"",  EmailConf:false, errorMassage:"", Id:"", Token:""});
+  const [errorMassage, setErrorMassage] =  React.useState("");
     return (
         <div><h1 className="header"> أضافة سائق</h1>
          <h2 className="sub-header">خاص بشركات ومؤسسات الطباعة والنسخ والتصوير</h2>
@@ -70,4 +79,4 @@ function features() {
     )
 }
 
-export default features
+export default AddDriver
