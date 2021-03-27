@@ -39,6 +39,7 @@ function App() {
         <Route path="/AddDrivers">  <AddDrivers />   </Route>
         <Route path="/Cuponspage">  <Cuponspage />   </Route>
         <Route path="/Branchprinter">  <Branchprinter />   </Route>
+        <Route path="/">  <Home />   </Route>
 
         Branchprinter
     </Switch>
