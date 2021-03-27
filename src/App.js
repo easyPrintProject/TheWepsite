@@ -11,11 +11,10 @@ import Register from "./register"
 import  Features from "./features"
 import PrintingShopInfo from "./PrintingShopInfo"
 import AdressInfo from "./AdressInfo"
+import AddDrivers from "./AddDrivers"
 import PrintShopProfile from "./PrintShopProfile";
 import Cuponspage from "./Cuponspage"
 import Branchprinter from "./Branchprinter"
-import AddDrivers from "./AddDriver"
-
 
 function App() {
   return (
@@ -37,9 +36,10 @@ function App() {
         <Route path="/PrintingShopInfo">  <PrintingShopInfo />    </Route>
         <Route path="/AdressInfo">  <AdressInfo />    </Route>
         <Route path="/PrintShopProfile">  <PrintShopProfile />    </Route>
+        <Route path="/AddDrivers">  <AddDrivers />   </Route>
         <Route path="/Cuponspage">  <Cuponspage />   </Route>
         <Route path="/Branchprinter">  <Branchprinter />   </Route>
-        <Route path="/AddDrive">  <AddDrivers/>   </Route>
+        <Route path="/">  <Home />   </Route>
 
         Branchprinter
     </Switch>
