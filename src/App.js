@@ -2,7 +2,6 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/header"
-import Footer from "./components/Footer"
 import Home from "./home"
 import About from "./About"
 import Pricing from "./pricing"
@@ -15,7 +14,8 @@ import AddDrivers from "./AddDrivers"
 import PrintShopProfile from "./PrintShopProfile";
 import Cuponspage from "./Cuponspage"
 import Branchprinter from "./Branchprinter"
-
+import AddProduct from "./AddProduct"
+import Product from "./Product"
 function App() {
   return (
     <div className="page-container">
@@ -39,11 +39,12 @@ function App() {
         <Route path="/AddDrivers">  <AddDrivers />   </Route>
         <Route path="/Cuponspage">  <Cuponspage />   </Route>
         <Route path="/Branchprinter">  <Branchprinter />   </Route>
+        <Route path="/AddProduct">  <AddProduct />   </Route>
+        <Route path="/Product">  <Product />   </Route>
+
         <Route path="/">  <Home />   </Route>
 
-        Branchprinter
     </Switch>
-     <Footer/> 
 </Router>
  
 </div>
