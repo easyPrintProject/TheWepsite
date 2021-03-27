@@ -39,7 +39,7 @@ import {MDBIcon } from 'mdb-react-ui-kit';
     <input type="email" name="Eamil" />
   
   
-
+{/* 12 */}
 <div className="footer">
       <button type="button" className="btn" onClick={handleShow}>
         أرسل
@@ -47,7 +47,7 @@ import {MDBIcon } from 'mdb-react-ui-kit';
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>! تهانينا </Modal.Title>
+          <Modal.Title> تهانينا </Modal.Title>
         </Modal.Header>
         <Modal.Body>تمت أضافة الكوبون الى(اسم الشخص)</Modal.Body>
         <Modal.Footer>
