@@ -8,13 +8,18 @@ import About from "./About"
 import Pricing from "./pricing"
 import Login from "./login"
 import Register from "./register"
-import  Features from "./features"
+import Features from "./features"
 import PrintingShopInfo from "./PrintingShopInfo"
 import AdressInfo from "./AdressInfo"
 import AddDrivers from "./AddDrivers"
 import PrintShopProfile from "./PrintShopProfile";
 import Cuponspage from "./Cuponspage"
 import Branchprinter from "./Branchprinter"
+import AddProduct from "./AddProduct"
+import Product from "./Product"
+
+
+
 
 function App() {
   return (
@@ -39,12 +44,15 @@ function App() {
         <Route path="/AddDrivers">  <AddDrivers />   </Route>
         <Route path="/Cuponspage">  <Cuponspage />   </Route>
         <Route path="/Branchprinter">  <Branchprinter />   </Route>
+        <Route path="/AddProduct">  <AddProduct />   </Route>
+        <Route path="/Product">  <Product />   </Route>
+
         <Route path="/">  <Home />   </Route>
 
-        Branchprinter
     </Switch>
-     <Footer/> 
+        {/* <Footer/> */}
 </Router>
+
  
 </div>
 
