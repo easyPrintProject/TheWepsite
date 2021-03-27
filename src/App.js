@@ -2,12 +2,13 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/header"
+import Footer from "./components/Footer"
 import Home from "./home"
 import About from "./About"
 import Pricing from "./pricing"
 import Login from "./login"
 import Register from "./register"
-import  Features from "./features"
+import Features from "./features"
 import PrintingShopInfo from "./PrintingShopInfo"
 import AdressInfo from "./AdressInfo"
 import AddDrivers from "./AddDrivers"
@@ -16,6 +17,10 @@ import Cuponspage from "./Cuponspage"
 import Branchprinter from "./Branchprinter"
 import AddProduct from "./AddProduct"
 import Product from "./Product"
+
+
+
+
 function App() {
   return (
     <div className="page-container">
@@ -45,7 +50,9 @@ function App() {
         <Route path="/">  <Home />   </Route>
 
     </Switch>
+        {/* <Footer/> */}
 </Router>
+
  
 </div>
 
