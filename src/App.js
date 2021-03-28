@@ -3,9 +3,9 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/header"
 import Footer from "./components/Footer"
-import Home from "./home"
+import Home from "./Home"
 import About from "./About"
-import Pricing from "./pricing"
+import Pricing from "./Pricing"
 import Login from "./login"
 import Register from "./register"
 import Features from "./features"
@@ -17,8 +17,10 @@ import Cuponspage from "./Cuponspage"
 import Branchprinter from "./Branchprinter"
 import AddProduct from "./AddProduct"
 import Product from "./Product"
+import PrivacyPolicy from "./PrivacyPolicy"
+import Acc from "./Acc"
 
-
+AccpetOrRejectPrinting
 
 
 function App() {
@@ -46,11 +48,13 @@ function App() {
         <Route path="/Branchprinter">  <Branchprinter />   </Route>
         <Route path="/AddProduct">  <AddProduct />   </Route>
         <Route path="/Product">  <Product />   </Route>
+        <Route path="/Home">  <Home />   </Route>
+        <Route path="/PrivacyPolicy">  <PrivacyPolicy />   </Route>
+        <Route path="/Acc">  <Acc />   </Route>
 
-        <Route path="/">  <Home />   </Route>
 
     </Switch>
-        {/* <Footer/> */}
+       <Footer/> 
 </Router>
 
  

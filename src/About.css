@@ -3,91 +3,116 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
 }
 
 .h1{
     font-size: 40px;
     font-weight: bold;
-    margin-left: 75%;
-        padding-top:25%;
+    margin-left: 60%;
+  
+        padding-top:15%;
         text-align: right;
-width: auto;
+
 }
-.h2{
+.h2{  
     font-size: 20px;
-    margin-left:55%;
-    text-align: right;
-    width: auto;
-     
+    margin-left:60%; 
+       text-align: right;
+    padding-top:1%;
+    font-weight: bold;
+
 }
 .h2-2{
     font-size: 20px;
-    margin-left:75%;
-        padding-top: 1em;
-        text-align: right;
-      
+    margin-left: 50%;
+      text-align: right;
+      padding-top:1%;
+      font-weight: bold;
+       
+
 }
+
 .icon{
-
-    margin-right: 5%;
-    margin-top: -30%;
-    display: flex;
-    flex-direction: column;
-    text-align: right;
+    margin-right: 80%;
+    padding-top: 451px;
+     text-align: right;
+     margin-top: -62%;
+     width: 100%;
+    
 }
+.texticon{
+    font-size: 20px;
+    margin-right: -25%;
+      text-align: right;
+      margin-top:-15%;
+      font-weight: bold;
+      width: 100%;
+}
+.texticon0{
+    font-size: 20px;
+    margin-right: 20%;
+      text-align: right;
+      margin-top:5%;
+      font-weight: bold;
+      width: 100%;
+}
+
+
+.icon1{
+    margin-right: 80%;
+    padding-top: 451px;
+     text-align: right;
+     margin-top: -62%;
+     width: 100%;
+}
+
+.texticon1{
+    font-size: 20px;
+    margin-right: -25%;
+      text-align: right;
+      margin-top:-15%;
+      font-weight: bold;
+      width: 100%;
+}
+
+.texticon1-0{
+    font-size: 20px;
+    margin-right: 20%;
+      text-align: right;
+      margin-top:5%;
+      font-weight: bold;
+      width: 100%;
+}
+
 .icon2{
-    margin-right: 5%;
-    margin-top: 10%;
-    
-    flex-direction: column;
-    text-align: right;
+    margin-right: 80%;
+    padding-top: 451px;
+     text-align: right;
+     margin-top: -62%;
+     width: 100%;
 }
-.icon3{
-    
-    margin-right: 5%;
-    margin-top:15%;
-    flex-direction: column;
-    text-align: right;
+.texticon2{
+    font-size: 20px;
+    margin-right: -25%;
+      text-align: right;
+      margin-top:-15%;
+      font-weight: bold;
+      width: 100%;
+}
+.texticon2-0{
+    font-size: 20px;
+    margin-right: 20%;
+      text-align: right;
+      margin-top:5%;
+      font-weight: bold;
+      width: 100%;
+}
 
+.base-container{
+    padding: 3%;
 }
-.h2-3{
-    font-size: 50px;
-    margin-right: -70%;
-    margin-top: -10%;
-padding: -10%;
-    width: 40%;
-}
-.h4{
-    font-size: 10px;
-    margin-left: -30%;
-    margin-top: -120%;
-    width: 60%;
-    text-align:right;
-}
-.h2-4{
-    font-size: 50px;
-    margin-left: -5%;
-    margin-top: -18%;
-    width: 40%;
-}
-.h4-2{
-    font-size: 20px;
-    margin-left: -10%;
-    margin-top: 1%;
-    width: 40%;
-    text-align:right;
-  
-}
-.h2-5{
-   font-size: 50px;
-    margin-left: -5%;
-    margin-top: -30%;
-    width: 40%;
-}
-.h4-3{
-    font-size: 20px;
-    margin-left: -37%;
-    margin-top: 1%;
-    width: 60%;
-    text-align:right;
+.contanet{
+    margin: 1%;
+    flex-direction: column;
 }
