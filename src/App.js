@@ -5,7 +5,7 @@ import Header from "./components/header"
 import Footer from "./components/Footer"
 import Home from "./Home"
 import About from "./About"
-import Pricing from "./Pricing"
+import Pricing from "./pricing"
 import Login from "./login"
 import Register from "./register"
 import Features from "./features"
@@ -18,23 +18,21 @@ import Branchprinter from "./Branchprinter"
 import AddProduct from "./AddProduct"
 import Product from "./Product"
 import PrivacyPolicy from "./PrivacyPolicy"
-import Acc from "./Acc"
+import Store from "./components/Store"
+// import Acc from "./Acc"
 
-AccpetOrRejectPrinting
+
 
 
 function App() {
   return (
     <div className="page-container">
-      <div className="content-wrap">
+    <div className="content-wrap">
 
-     
+   <Store>
     <Router>
      <Header/>
-   
      <Switch>
-
-
         <Route path="/Login">  <Login/>  </Route>
         <Route path="/Register">  <Register/>  </Route>
         <Route path="/Pricing">  <Pricing />   </Route>
@@ -50,19 +48,14 @@ function App() {
         <Route path="/Product">  <Product />   </Route>
         <Route path="/Home">  <Home />   </Route>
         <Route path="/PrivacyPolicy">  <PrivacyPolicy />   </Route>
-        <Route path="/Acc">  <Acc />   </Route>
+        {/* <Route path="/Acc">  <Acc />   </Route> */}
 
 
     </Switch>
        <Footer/> 
 </Router>
-
- 
-</div>
-
-    </div>
-   
-  
+</Store>
+</div></div>
   );
 }
 
