@@ -3,17 +3,17 @@ const Reducer = (state, action) => {
         case 'SET_USER':
             return {
                 ...state,
-                posts: action.payload
+                user: action.payload
             };
         case 'REMOVE_USER':
             return {
                 ...state,
-                posts: state.posts.filter(post => post.id !== action.payload)
+                user:{}
             };
         case 'SET_ERROR':
             return {
                 ...state,
-                error: action.payload
+                user: action.payload
             };
         default:
             return state;
