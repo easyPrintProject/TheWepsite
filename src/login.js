@@ -18,17 +18,17 @@ function Login() {
      if (user == null || user.Email == ""  ) {
       dispatch({type: 'SET_USER', payload: null});
      } else {
-        dispatch({type: 'SET_USER', payload: user});
-         console.log(user);
-         history.push("/");
+        //  history.push("/PrintShopProfile");
+        console.log("state");
+        console.log(state);
+        history.push("/PrintShopProfile");
      }
    }, [user]) //will only run when then app component loads
   
   const Login = async () => {
     axios.post("https://localhost:44399/api/PrintingShopLogin", {Email:email, PasswordHash:password})
     .then(response => {
-      console.log(response);
-      console.log(response.data);
+      dispatch({type: 'SET_USER', payload: response.data});
       setUser({
         Email: response.data.email,
         PhoneNumber: response.data.phoneNumber,

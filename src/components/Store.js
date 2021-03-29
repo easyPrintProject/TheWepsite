@@ -3,7 +3,7 @@ import Reducer from './Reducer'
 
 
 const initialState = {
-    users: [],
+    user:{},
     error: null
 };
 
