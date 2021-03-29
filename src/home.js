@@ -3,12 +3,12 @@ import { MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardG
 import { Link } from "react-router-dom";
 
 
-function home() {
+function Home() {
     return (
         <div dir="rtl">
              <div
       className='p-5 text-center bg-image'
-      style={{ backgroundImage: "url('https://i.pinimg.com/originals/89/23/a2/8923a220c509f3e1a69af46b3588434e.jpg')", height: 600 }}
+      style={{ backgroundImage: "url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v19-pla-208-mockups_2.jpg?w=1300&dpr=1&fit=default&crop=default&q=80&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=88f13fefa39c5ea2808d73863b740872')", height: 600 }}
     >
       <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>
         <div className='d-flex justify-content-center align-items-center h-100'>
@@ -73,4 +73,4 @@ function home() {
     )
 }
 
-export default home
+export default Home

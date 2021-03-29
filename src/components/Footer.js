@@ -3,43 +3,40 @@ import "./Footer.css";
 import { Link } from "react-router-dom";
 
 function Footer() {
-  return (
-    <div className="main-footer">
-      <div className="container">
+  return ( <div className="base-container">   
+  <div className="main-footer">
+    
+  
         <div className="row">
-          {/* Column1 */}
+       
           <div className="col">
-            <h4>THICC MEMES INC</h4>
-            <h1 className="list-unstyled">
-              <li>342-420-6969</li>
-              <li>Moscow, Russia</li>
-              <li>123 Streeet South North</li>
-            </h1>
-          </div>
-          {/* Column2 */}
-          <div className="col">
-            <h4>Stuff</h4>
-            <ui className="list-unstyled">
-              <li>DANK MEMES</li>
-              <li>OTHER STUFF</li>
-              <li>GUD STUFF</li>
-            </ui>
-          </div>
-          {/* Column3 */}
-          <div className="col">
-          <Link to="./About" style={{ color: '#FFF' }}>
+            
+            <h2 className="list-unstyled" style={{marginRight:20,marginTop:33}}>
+            <Link to="./About" style={{ color: '#FFF' }}>
             <h4>مين ايزي برنت؟</h4>
             </Link>
-            <ui className="list-unstyled">
-              <li>أفرع برنتلي</li>
-              <li>OTHER STUFF</li>
-              <li>GUD STUFF</li>
+    
+            </h2>
+          </div>
+      
+          {/* Column3 */}
+          <div className="col" style={{marginRight:20,marginTop:33}}>
+                <ui className="list-unstyled">
+              <Link to="./Branchprinter" style={{ color: '#FFF' }}> 
+              <li style={{fontSize:23,marginTop:-10}}>أفرع برنتلي</li>
+           </Link>
+           </ui>
+           
+            <ui style={{ color: '#FFF',fontSize:20 }}> 
+              
+منصة الطباعة السهلة الإلكترونية
+طالبات جامهة طيبة - قسم نظم معلومات
             </ui>
           </div>
         </div>
         <hr />
         <div className="row">
-          <p className="col-sm">
+          <p>
             &copy;{new Date().getFullYear()} THICC MEMES | All rights reserved |
             Terms Of Service | Privacy
           </p>
