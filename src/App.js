@@ -18,7 +18,7 @@ import Branchprinter from "./Branchprinter"
 import AddProduct from "./AddProduct"
 import Product from "./Product"
 import PrivacyPolicy from "./PrivacyPolicy"
-import Acc from "./Acc"
+//import Acc from "./Acc"
 
 AccpetOrRejectPrinting
 
@@ -50,7 +50,7 @@ function App() {
         <Route path="/Product">  <Product />   </Route>
         <Route path="/Home">  <Home />   </Route>
         <Route path="/PrivacyPolicy">  <PrivacyPolicy />   </Route>
-        <Route path="/Acc">  <Acc />   </Route>
+        {/*<Route path="/Acc">  <Acc />   </Route>*/}
 
 
     </Switch>
