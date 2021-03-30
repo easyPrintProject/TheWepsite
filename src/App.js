@@ -2,6 +2,7 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/header"
+
 import Footer from "./components/Footer"
 import Home from "./Home"
 import About from "./About"
@@ -18,8 +19,15 @@ import Branchprinter from "./Branchprinter"
 import AddProduct from "./AddProduct"
 import Product from "./Product"
 import PrivacyPolicy from "./PrivacyPolicy"
+<<<<<<< HEAD
+import HomeAdmin from "./Dachboard"
+import JoinRequestAdmin from "./JoinRequestAdmin"
+import Dachboard from "./Dachboard"
+import Proplem from "./Proplem"
+=======
 import Store from "./components/Store"
 // import Acc from "./Acc"
+>>>>>>> main
 
 
 
@@ -48,15 +56,39 @@ function App() {
         <Route path="/Product">  <Product />   </Route>
         <Route path="/Home">  <Home />   </Route>
         <Route path="/PrivacyPolicy">  <PrivacyPolicy />   </Route>
+<<<<<<< HEAD
+        <Route path="/JoinRequestAdmin">  <JoinRequestAdmin />   </Route>
+        <Route path="/Proplem">  <Proplem />   </Route>
+=======
         {/* <Route path="/Acc">  <Acc />   </Route> */}
 
+>>>>>>> main
 
+        <Route path="/Dachboard">  <Dachboard />   </Route>
+        
+  
+        <Route path="/HomeAdmin">  <HomeAdmin />   </Route>
+        
     </Switch>
        <Footer/> 
+<<<<<<< HEAD
+
+
+
+     
+</Router>
+</div>
+
+    </div>
+   
+  
+=======
 </Router>
 </Store>
 </div></div>
+>>>>>>> main
   );
 }
+
 
 export default App;
