@@ -1,39 +1,46 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import './register.css'
+import axios from 'axios';
 import { Link, useHistory } from "react-router-dom";
-import { useStateValue } from "./components/stateProvidor";
+import {Context} from "./components/Store"
 
 function Login() {
 
   const history = useHistory();
-  // const [{ }, dispatch] = useStateValue("");
+  const [state, dispatch] = useContext(Context);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState({Email:"", UserName:"", PhoneNumber:"",  EmailConf:false, errorMassage:"", Id:"", Token:""});
+  const[info, setInfo] = useState({Email:"omar@gmail.com", PasswordHash:"raghad221"});
 
 
-  // useEffect(() => {
-        
-  //   if (user == null || user == ""  ) {
-  //       dispatch({
-  //           type: 'SET_USER',
-  //           user: null
-  //       })
-  //   } else {
-  //       console.log(user);
-  //       history.push("/");
-  //   }
-  // }, [user]) //will only run when then app component loads
+   useEffect(() => {
+     if (user == null || user.Email == ""  ) {
+      dispatch({type: 'SET_USER', payload: null});
+     } else {
+        //  history.push("/PrintShopProfile");
+        console.log("state");
+        console.log(state);
+        history.push("/PrintShopProfile");
+     }
+   }, [user]) //will only run when then app component loads
   
   const Login = async () => {
-    const requestOptions = {
-      mode: 'no-cors',
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', "Access-Control-Allow-Origin": "*" },
-      body: JSON.stringify({ Email: 'Ahmed@gmail.com', PasswordHash:"raghad221" })
-  };
-  fetch('https://localhost:44399/api/PrintingShopLogin', requestOptions)
-    
+    axios.post("https://localhost:44399/api/PrintingShopLogin", {Email:email, PasswordHash:password})
+    .then(response => {
+      dispatch({type: 'SET_USER', payload: response.data});
+      setUser({
+        Email: response.data.email,
+        PhoneNumber: response.data.phoneNumber,
+        UserName:response.data.userName, 
+        EmailConf:response.data.emailConfiremd,
+        errorMassage:response.data.errorMessage,
+        Id:response.data.id,
+        Token:response.data.token,
+        });
+    }).catch(error => {
+      console.log(error.response)
+  });
   }
 
     return (
