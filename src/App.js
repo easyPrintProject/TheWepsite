@@ -2,6 +2,7 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/header"
+
 import Footer from "./components/Footer"
 import Home from "./Home"
 import About from "./About"
@@ -18,9 +19,12 @@ import Branchprinter from "./Branchprinter"
 import AddProduct from "./AddProduct"
 import Product from "./Product"
 import PrivacyPolicy from "./PrivacyPolicy"
-import Acc from "./Acc"
+import HomeAdmin from "./Dachboard"
+import JoinRequestAdmin from "./JoinRequestAdmin"
+import Dachboard from "./Dachboard"
+import Proplem from "./Proplem"
 
-AccpetOrRejectPrinting
+
 
 
 function App() {
@@ -50,14 +54,21 @@ function App() {
         <Route path="/Product">  <Product />   </Route>
         <Route path="/Home">  <Home />   </Route>
         <Route path="/PrivacyPolicy">  <PrivacyPolicy />   </Route>
-        <Route path="/Acc">  <Acc />   </Route>
+        <Route path="/JoinRequestAdmin">  <JoinRequestAdmin />   </Route>
+        <Route path="/Proplem">  <Proplem />   </Route>
 
-
+        <Route path="/Dachboard">  <Dachboard />   </Route>
+        
+  
+        <Route path="/HomeAdmin">  <HomeAdmin />   </Route>
+        
     </Switch>
        <Footer/> 
-</Router>
 
- 
+
+
+     
+</Router>
 </div>
 
     </div>
@@ -65,5 +76,6 @@ function App() {
   
   );
 }
+
 
 export default App;
