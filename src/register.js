@@ -18,8 +18,8 @@ function Register() {
   const [errorMassage, setErrorMassage] =  React.useState("");
   
     return (
-          <div>
-    <div className="header">الانضمام كمقدم خدمة</div>
+          <div style={{marginBottom:111}}>
+    <div className="header">التسجيل كمزود خدمة</div>
     <h2 className="sub-header">خاص بشركات ومؤسسات الطباعة والنسخ والتصوير</h2>
     <h5 className="sub-header2">معلومات مالك المطبعة</h5>
 

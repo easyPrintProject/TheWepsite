@@ -12,10 +12,13 @@ function Footer() {
           <div className="col">
             
             <h2 className="list-unstyled" style={{marginRight:20,marginTop:33}}>
-            <Link to="./About" style={{ color: '#FFF' }}>
-            <h4>مين ايزي برنت؟</h4>
+            <Link to="./About" style={{ color: '#FFF', }}>
+            <h4 style={{fontSize:17}}>مين ايزي برنت؟</h4>
             </Link>
-    
+            <Link to="./register" style={{ color: '#FFF' }}>
+            <h4 style={{fontSize:17}}>
+              التسجيل كمزود خدمة</h4>
+            </Link>
             </h2>
           </div>
       
@@ -23,11 +26,11 @@ function Footer() {
           <div className="col" style={{marginRight:20,marginTop:33}}>
                 <ui className="list-unstyled">
               <Link to="./Branchprinter" style={{ color: '#FFF' }}> 
-              <li style={{fontSize:23,marginTop:-10}}>أفرع ايزي برنت</li>
+              <li style={{fontSize:17,marginTop:-10}}>أفرع ايزي برنت</li>
            </Link>
            </ui>
            
-            <ui style={{ color: '#FFF',fontSize:20 }}> 
+            <ui style={{ color: '#FFF',fontSize:17 }}> 
               
 منصة الطباعة السهلة الإلكترونية
 طالبات جامعة طيبة - قسم نظم معلومات

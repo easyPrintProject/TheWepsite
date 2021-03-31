@@ -17,7 +17,9 @@ function PrintingShopInfo() {
   
     return (
           <div>
-    <div className="header">الانضمام كمقدم خدمة</div>
+    <div className="header">
+      الانضمام كمقدم خدمة
+      </div>
     <h2 className="sub-header">خاص بشركات ومؤسسات الطباعة والنسخ والتصوير</h2>
     <h5 className="sub-header2">معلومات المطبعة</h5>
 
@@ -70,11 +72,12 @@ function PrintingShopInfo() {
           <label > هل ترغب بتقديم منتجات مطبوعة جاهزة ؟ </label>
           <input type="checkbox"  onChange={(e) => setisCourseMaterial(e.target.value)}/>
         </div>
+        
       </div>
     </div>
     <div className="footer">
       <Link to="./AdressInfo">
-      <button type="button" className="btn">
+      <button type="button" className="btn" style={{marginBottom:99}} >
         التالي
       </button></Link>
     </div>
