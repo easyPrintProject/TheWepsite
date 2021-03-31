@@ -21,7 +21,7 @@ function AdressInfo() {
 
       return (
             <div>
-      <div className="header">الانضمام كمقدم خدمة</div>
+      <div className="header">      الانضمام كمقدم خدمة  </div>
       <h2 className="sub-header">خاص بشركات ومؤسسات الطباعة والنسخ والتصوير</h2>
       <h5 className="sub-header2">عنوان المطبعة</h5>
   
@@ -48,34 +48,34 @@ function AdressInfo() {
         <div className="form">
   
           <div className="form-group">
-            <label htmlFor="Name"> : الدولة </label>
+            <label htmlFor="Name">  الدولة :</label>
             <input type="text" name="Name" onChange={(e) => setCountry(e.target.value)} />
           </div>
           <div className="form-group">
-            <label htmlFor="Phone"  >: المدينة</label>
+            <label htmlFor="Phone"  > المدينة :</label>
             <input type="text" name="Phone"  onChange={(e) => setCity(e.target.value)}  />
           </div>
           <div className="form-group">
-            <label htmlFor="Phone"  >:  الحي</label>
+            <label htmlFor="Phone"  >  الحي :</label>
             <input type="text" name="Phone"  onChange={(e) => setNeighborhood(e.target.value)}  />
           </div>
           <div className="form-group">
-            <label htmlFor="Email" >: الشارع</label>
+            <label htmlFor="Email" > الشارع :</label>
             <input type="email" name="Eamil"  onChange={(e) => setStreet(e.target.value)}/>
           </div>
           <div className="form-group">
-            <label htmlFor="City" > : وصف لمعلم قريب</label>
+            <label htmlFor="City" >  وصف لمعلم قريب : </label>
             <input type="text" name="City" onChange={(e) => setAdressLine(e.target.value)} />
           </div> 
           <div className="form-group">
-            <label htmlFor="password" >: صندوق بريد</label>
+            <label htmlFor="password" > صندوق بريد :</label>
             <input type="password" name="password"
               onChange={(e) => setPostcode(e.target.value)}  />
           </div>
         </div>
       </div>
       <div className="footer">
-      <button type="button" className="btn" onClick={handleShow}>
+      <button type="button" className="btn" style={{marginBottom:99}} onClick={handleShow}>
         التالي
       </button>
 
