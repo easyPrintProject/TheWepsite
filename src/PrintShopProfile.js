@@ -26,7 +26,7 @@ const Data = [
     },
     {
         title: 'تعديل منتج',
-        path: '/modifyProduct',
+        path: '/Updateproduct',
         icon: <FiFeather.FiEdit />,
         cName: 'nav-text'
       },
@@ -50,7 +50,7 @@ const Data = [
     },
     {
       title: 'تعديل بيانات المكتبة ',
-      path: '/modifyPrintShopInfo',
+      path: '/UpdatePrintingShopInfo',
       icon: <FiFeather.FiSettings />,
       cName: 'nav-text'
     }
@@ -93,7 +93,7 @@ function PrintShopProfile() {
           </ul>
         </nav>
       </IconContext.Provider>
-      <h2> اهلاً  { state.user.data.printerName }</h2>
+      {/* <h2> اهلاً  { state.user.data.printerName }</h2> */}
             {/* <div className='btnStyle'>
                 <MDBBtn color="darkslategray" size="lg" outline rounded href="#">الطلبات الحالية</MDBBtn>
                 <MDBBtn color="darkslategray" size="lg" outline rounded href="#">الطلبات الجديدة</MDBBtn>

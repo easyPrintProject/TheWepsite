@@ -24,16 +24,20 @@ function AddDrivers() {
   const [errorMassage, setErrorMassage] =  React.useState("");
 
     return (
-        <div><h1 className="header"> أضافة سائق</h1>
+        <div>   <div   className='p-5 text-center bg-image'
+      style={{ backgroundImage: "url('https://image.freepik.com/vetores-gratis/homem-dirigindo-uma-motocicleta-sobre-um-mapa-de-gps-em-um-telefone-inteligente-servico-de-entrega_211621-33.jpg')", height: 400,width:500,marginRight:"37%"}}
+     >
+     
+      </div>
+      
+       <h1 className="header"> أضافة سائق</h1>
          <h2 className="sub-header">خاص بشركات ومؤسسات الطباعة والنسخ والتصوير</h2>
   
 
     <div className="content">
-    <div   className='p-5 text-center bg-image'
-      style={{ backgroundImage: "url('https://image.freepik.com/vetores-gratis/homem-dirigindo-uma-motocicleta-sobre-um-mapa-de-gps-em-um-telefone-inteligente-servico-de-entrega_211621-33.jpg')", height: 200,width:200,marginLeft:450 }}
-    >
+ 
 
-    </div>
+
       
       <div className="form">
 

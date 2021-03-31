@@ -35,8 +35,8 @@ function AddProduct() {
     }
     return (
         <div>
-        <h2> اضافة منتج</h2>    
-        <div className="col-sm-6 offset-sm-3">
+        <h2 style={{marginTop:"4%",fontSize:50}}> اضافة منتج</h2>    
+        <div className="col-sm-6 offset-sm-3" style={{marginRight:"23%",marginTop:"10%"}}>
             <br/>
             <input type="file" className="form-control"
             onChange={(e)=>setFile(e.target.value)}
@@ -57,9 +57,13 @@ function AddProduct() {
             onChange={(e)=>setPrice(e.target.value)}
                         /> <br/>
         
-            <div class="d-grid gap-3 d-md-flex justify-content-md-center" >  
-        <MDBBtn onClick={addProduct} >اضافة الملزمة
-        </MDBBtn></div>
+           <div style={{marginBottom:111}}> 
+    
+    <Button variant="contained" size="large" color="#4a87e3" onClick={addProduct}  >
+      اضافة الملزمة
+    </Button>
+
+  </div>
         </div>
 
         </div>
