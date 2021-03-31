@@ -61,7 +61,7 @@ function Updateproduct() {
       
       <div style={{marginBottom:111}}> 
     
-        <Button variant="contained" size="large" color="#bdbdbd"  >
+        <Button variant="contained" size="large" color="#4a87e3"  >
           تحديث
         </Button>
     
