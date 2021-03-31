@@ -2,10 +2,11 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/header"
+
 import Footer from "./components/Footer"
 import Home from "./Home"
 import About from "./About"
-import Pricing from "./Pricing"
+import Pricing from "./pricing"
 import Login from "./login"
 import Register from "./register"
 import Features from "./features"
@@ -18,23 +19,28 @@ import Branchprinter from "./Branchprinter"
 import AddProduct from "./AddProduct"
 import Product from "./Product"
 import PrivacyPolicy from "./PrivacyPolicy"
-//import Acc from "./Acc"
+<<<<<<< HEAD
+import HomeAdmin from "./Dachboard"
+import JoinRequestAdmin from "./JoinRequestAdmin"
+import Dachboard from "./Dachboard"
+import Proplem from "./Proplem"
+=======
+import Store from "./components/Store"
+// import Acc from "./Acc"
+>>>>>>> main
 
-AccpetOrRejectPrinting
+
 
 
 function App() {
   return (
     <div className="page-container">
-      <div className="content-wrap">
+    <div className="content-wrap">
 
-     
+   <Store>
     <Router>
      <Header/>
-   
      <Switch>
-
-
         <Route path="/Login">  <Login/>  </Route>
         <Route path="/Register">  <Register/>  </Route>
         <Route path="/Pricing">  <Pricing />   </Route>
@@ -50,20 +56,39 @@ function App() {
         <Route path="/Product">  <Product />   </Route>
         <Route path="/Home">  <Home />   </Route>
         <Route path="/PrivacyPolicy">  <PrivacyPolicy />   </Route>
-        {/*<Route path="/Acc">  <Acc />   </Route>*/}
+<<<<<<< HEAD
+        <Route path="/JoinRequestAdmin">  <JoinRequestAdmin />   </Route>
+        <Route path="/Proplem">  <Proplem />   </Route>
+=======
+        {/* <Route path="/Acc">  <Acc />   </Route> */}
 
+>>>>>>> main
 
+        <Route path="/Dachboard">  <Dachboard />   </Route>
+        
+  
+        <Route path="/HomeAdmin">  <HomeAdmin />   </Route>
+        
     </Switch>
        <Footer/> 
-</Router>
+<<<<<<< HEAD
 
- 
+
+
+     
+</Router>
 </div>
 
     </div>
    
   
+=======
+</Router>
+</Store>
+</div></div>
+>>>>>>> main
   );
 }
+
 
 export default App;

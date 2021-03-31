@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import {
      MDBBtn, 
 } from 'mdb-react-ui-kit';
@@ -8,6 +8,8 @@ import { IconContext } from 'react-icons';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as FiFeather from "react-icons/fi"
+import {Context} from "./components/Store"
+
 
 
 
@@ -59,6 +61,8 @@ const Data = [
 function PrintShopProfile() {
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
+    const [state, dispatch] = useContext(Context);
+
 
 
 
@@ -89,13 +93,13 @@ function PrintShopProfile() {
           </ul>
         </nav>
       </IconContext.Provider>
-      <h2>اسم المكتبة</h2>
-            <div className='btnStyle'>
+      <h2> اهلاً  { state.user.data.printerName }</h2>
+            {/* <div className='btnStyle'>
                 <MDBBtn color="darkslategray" size="lg" outline rounded href="#">الطلبات الحالية</MDBBtn>
                 <MDBBtn color="darkslategray" size="lg" outline rounded href="#">الطلبات الجديدة</MDBBtn>
                 <MDBBtn color="darkslategray" size="lg" outline rounded href="#"> الطلبات السابقة</MDBBtn>
 
-</div>
+</div> */}
 
         </div>
     )

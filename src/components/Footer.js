@@ -23,14 +23,14 @@ function Footer() {
           <div className="col" style={{marginRight:20,marginTop:33}}>
                 <ui className="list-unstyled">
               <Link to="./Branchprinter" style={{ color: '#FFF' }}> 
-              <li style={{fontSize:23,marginTop:-10}}>أفرع برنتلي</li>
+              <li style={{fontSize:23,marginTop:-10}}>أفرع ايزي برنت</li>
            </Link>
            </ui>
            
             <ui style={{ color: '#FFF',fontSize:20 }}> 
               
 منصة الطباعة السهلة الإلكترونية
-طالبات جامهة طيبة - قسم نظم معلومات
+طالبات جامعة طيبة - قسم نظم معلومات
             </ui>
           </div>
         </div>
