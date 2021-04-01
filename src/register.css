@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Tajawal:wght@500&display=swap');
+
 .base-container {
     width: 100%;
     display: flex;
@@ -12,17 +14,22 @@
       font-size: 50px;
       text-align: center;
       align-items: center;
+      font-family:'Tajawal';
 
     }
   .sub-header{
     font-size: 25px;
     text-align: center;
+    font-family:'Tajawal';
+
 
 
   }
   .sub-header2{
     text-align: center;
     color:cadetblue;
+    font-family:'Tajawal';
+
   }
     .content {
       display: flex;
@@ -43,8 +50,10 @@
       .form {
         margin-top: 2em;
         display: flex;
-        flex-direction: column;
         align-items: center;
+        font-family:'Tajawal';
+        font-weight: bold;
+
         
       }
 
@@ -70,6 +79,8 @@
             border-radius: 4px;
             margin-bottom: 31px;
             transition: all 250ms ease-in-out;
+            font-family:'Tajawal';
+
           }
          
         
@@ -79,6 +90,9 @@
     .footer {
       margin-top: 3em;
       text-align: center;
+      font-family:'Tajawal';
+      font-size: 15;
+
     }
 
    

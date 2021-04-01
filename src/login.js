@@ -51,14 +51,14 @@ function Login() {
           </div>
           <div className="form">
             <div className="form-group">
-              <label htmlFor="CoName">: الأيميل </label>
-              <input type="text" name="Email" 
+              <label htmlFor="CoName"> البريد الإلكتروني </label>
+              <input className="form-control" type="text" name="Email" 
                onChange={(e) => setEmail(e.target.value)}/>
             </div>
            
             <div className="form-group">
-              <label htmlFor="password">: كلمة السر </label>
-              <input type="password" name="password"
+              <label htmlFor="password"> كلمة السر </label>
+              <input className="form-control" type="password" name="password"
                  onChange={(e) => setPassword(e.target.value)}/>
             </div>
         
@@ -66,7 +66,7 @@ function Login() {
         </div>
         <div className="footer">
           
-          <button type="button" className="btn" onClick={Login}>
+          <button type="button" className="btn" style={{fontSize: 17}} onClick={Login}>
              تسجيل الدخول
           </button>
         </div>

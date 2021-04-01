@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {MDBIcon } from 'mdb-react-ui-kit';
   import { Link } from "react-router-dom";
-import './PrintingShopInfo.css';
+import './UpdatePrintingShopInfo.css';
 import { Button, Modal, Form } from 'react-bootstrap';
 
 
@@ -36,45 +36,45 @@ function UpdatePrintingShopInfo() {
 
         <div className="form-group">
           <label htmlFor="Name">  اسم المطبعة :</label>
-          <input type="text" name="Name" onChange={(e) => setprenterName(e.target.value)} />
+          <input className="form-control" type="text" name="Name" onChange={(e) => setprenterName(e.target.value)} />
         </div>
         <div className="form-group">
           <label htmlFor="Phone"  > الرقم التجاري :</label>
-          <input type="text" name="Phone"  onChange={(e) => setcommrecialNumber(e.target.value)}  />
+          <input className="form-control" type="text" name="Phone"  onChange={(e) => setcommrecialNumber(e.target.value)}  />
         </div>
         <div className="form-group">
           <label htmlFor="Phone"  > الاسم التجاري :</label>
-          <input type="text" name="Phone"  onChange={(e) => setcommrecialName(e.target.value)}  />
+          <input className="form-control" type="text" name="Phone"  onChange={(e) => setcommrecialName(e.target.value)}  />
         </div>
         <div className="form-group">
           <label htmlFor="Email" > البريد الإلكتروني الخاص بالمطبعة :</label>
-          <input type="email" name="Eamil"  onChange={(e) => setPrintingShopEmail(e.target.value)}/>
+          <input className="form-control" type="email" name="Eamil"  onChange={(e) => setPrintingShopEmail(e.target.value)}/>
         </div>
   
    
         <div className="form-group">
             <label htmlFor="Name">  الدولة :</label>
-            <input type="text" name="Name" onChange={(e) => setCountry(e.target.value)} />
+            <input className="form-control" type="text" name="Name" onChange={(e) => setCountry(e.target.value)} />
           </div>
           <div className="form-group">
             <label htmlFor="Phone"  > المدينة :</label>
-            <input type="text" name="Phone"  onChange={(e) => setCity(e.target.value)}  />
+            <input className="form-control" type="text" name="Phone"  onChange={(e) => setCity(e.target.value)}  />
           </div>
           <div className="form-group">
             <label htmlFor="Phone"  >  الحي :</label>
-            <input type="text" name="Phone"  onChange={(e) => setNeighborhood(e.target.value)}  />
+            <input className="form-control" type="text" name="Phone"  onChange={(e) => setNeighborhood(e.target.value)}  />
           </div>
           <div className="form-group">
             <label htmlFor="Email" > الشارع :</label>
-            <input type="email" name="Eamil"  onChange={(e) => setStreet(e.target.value)}/>
+            <input  className="form-control" type="email" name="Eamil"  onChange={(e) => setStreet(e.target.value)}/>
           </div>
           <div className="form-group">
             <label htmlFor="City" >  وصف لمعلم قريب : </label>
-            <input type="text" name="City" onChange={(e) => setAdressLine(e.target.value)} />
+            <input className="form-control" type="text" name="City" onChange={(e) => setAdressLine(e.target.value)} />
           </div> 
           <div className="form-group">
             <label htmlFor="password" > صندوق بريد :</label>
-            <input type="password" name="password"
+            <input className="form-control" type="password" name="password"
               onChange={(e) => setPostcode(e.target.value)}  />
           </div>
          
@@ -83,7 +83,7 @@ function UpdatePrintingShopInfo() {
     </div>
     <div className="footer">
       <Link to="./AdressInfo">
-      <button type="button" className="btn">
+      <button type="button" className="btn" style={{fontSize:17}}>
         تحديث
       </button></Link>
     </div>

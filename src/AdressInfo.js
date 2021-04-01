@@ -48,40 +48,40 @@ function AdressInfo() {
         <div className="form">
   
           <div className="form-group">
-            <label htmlFor="Name">  الدولة :</label>
-            <input type="text" name="Name" onChange={(e) => setCountry(e.target.value)} />
+            <label htmlFor="Name">  الدولة </label>
+            <input className="form-control" type="text" name="Name" onChange={(e) => setCountry(e.target.value)} />
           </div>
           <div className="form-group">
-            <label htmlFor="Phone"  > المدينة :</label>
-            <input type="text" name="Phone"  onChange={(e) => setCity(e.target.value)}  />
+            <label htmlFor="Phone"  > المدينة </label>
+            <input className="form-control" type="text" name="Phone"  onChange={(e) => setCity(e.target.value)}  />
           </div>
           <div className="form-group">
-            <label htmlFor="Phone"  >  الحي :</label>
-            <input type="text" name="Phone"  onChange={(e) => setNeighborhood(e.target.value)}  />
+            <label htmlFor="Phone"  >  الحي </label>
+            <input className="form-control" type="text" name="Phone"  onChange={(e) => setNeighborhood(e.target.value)}  />
           </div>
           <div className="form-group">
-            <label htmlFor="Email" > الشارع :</label>
-            <input type="email" name="Eamil"  onChange={(e) => setStreet(e.target.value)}/>
+            <label htmlFor="Email" > الشارع </label>
+            <input className="form-control" type="email" name="Eamil"  onChange={(e) => setStreet(e.target.value)}/>
           </div>
           <div className="form-group">
-            <label htmlFor="City" >  وصف لمعلم قريب : </label>
-            <input type="text" name="City" onChange={(e) => setAdressLine(e.target.value)} />
+            <label htmlFor="City" >  وصف لمعلم قريب  </label>
+            <input className="form-control" type="text" name="City" onChange={(e) => setAdressLine(e.target.value)} />
           </div> 
           <div className="form-group">
-            <label htmlFor="password" > صندوق بريد :</label>
-            <input type="password" name="password"
+            <label htmlFor="password" > صندوق بريد </label>
+            <input  className="form-control" type="password" name="password"
               onChange={(e) => setPostcode(e.target.value)}  />
           </div>
         </div>
       </div>
       <div className="footer">
-      <button type="button" className="btn" style={{marginBottom:99}} onClick={handleShow}>
+      <button type="button" className="btn" style={{marginBottom:99, fontSize:15}} onClick={handleShow}>
         التالي
       </button>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} className='test'>
         <Modal.Header closeButton>
-          <Modal.Title>! تهانينا </Modal.Title>
+          <Modal.Title> تهانينا! </Modal.Title>
         </Modal.Header>
         <Modal.Body>تمت عمليت التسجيل بنجاح, سيتم مراجعة معلوماتك وتفعيل حسابك خلال 24 ساعة </Modal.Body>
         <Modal.Footer>
