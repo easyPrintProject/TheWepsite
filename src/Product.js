@@ -48,8 +48,8 @@ async function DeleteProduct(id){
         <MDBBtn color='danger' >حذف
         <MDBIcon className='ms-2'  icon='trash'  /> 
         </MDBBtn>
-        <MDBBtn  color='info'>تعديل
-        <MDBIcon className='ms-2' icon='edit'  /> 
+        <MDBBtn  color='info' href="Updateproduct">تعديل
+        <MDBIcon className='ms-2' icon='edit'   /> 
         </MDBBtn>   </div>     </div>
    
 

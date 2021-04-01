@@ -44,24 +44,24 @@ function PrintingShopInfo() {
       <div className="form">
 
         <div className="form-group">
-          <label htmlFor="Name"> : اسم المطبعة</label>
-          <input type="text" name="Name" onChange={(e) => setprenterName(e.target.value)} />
+          <label htmlFor="Name"> اسم المطبعة</label>
+          <input className="form-control" type="text" name="Name" onChange={(e) => setprenterName(e.target.value)} />
         </div>
         <div className="form-group">
-          <label htmlFor="Phone"  >: الرقم التجاري</label>
-          <input type="text" name="Phone"  onChange={(e) => setcommrecialNumber(e.target.value)}  />
+          <label htmlFor="Phone"  > الرقم التجاري</label>
+          <input className="form-control" type="text" name="Phone"  onChange={(e) => setcommrecialNumber(e.target.value)}  />
         </div>
         <div className="form-group">
-          <label htmlFor="Phone"  >: الاسم التجاري</label>
-          <input type="text" name="Phone"  onChange={(e) => setcommrecialName(e.target.value)}  />
+          <label htmlFor="Phone"  >الاسم التجاري</label>
+          <input className="form-control" type="text" name="Phone"  onChange={(e) => setcommrecialName(e.target.value)}  />
         </div>
         <div className="form-group">
-          <label htmlFor="Email" >: البريد الإلكتروني الخاص بالمطبعة</label>
-          <input type="email" name="Eamil"  onChange={(e) => setPrintingShopEmail(e.target.value)}/>
+          <label htmlFor="Email" > البريد الإلكتروني الخاص بالمطبعة</label>
+          <input className="form-control" type="email" name="Eamil"  onChange={(e) => setPrintingShopEmail(e.target.value)}/>
         </div>
         <div className="form-group">
-          <label htmlFor="City" > : المدينة</label>
-          <input type="text" name="City" onChange={(e) => setcity(e.target.value)} />
+          <label htmlFor="City" >  المدينة</label>
+          <input className="form-control" type="text" name="City" onChange={(e) => setcity(e.target.value)} />
         </div> 
         <div className="form-group">
           <label >هل ترغب بتقديم خدمات الطباعة للزبائن ؟</label>
@@ -77,7 +77,7 @@ function PrintingShopInfo() {
     </div>
     <div className="footer">
       <Link to="./AdressInfo">
-      <button type="button" className="btn" style={{marginBottom:99}} >
+      <button type="button" className="btn" style={{marginBottom:99, fontSize:15}} >
         التالي
       </button></Link>
     </div>

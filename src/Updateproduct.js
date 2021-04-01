@@ -34,7 +34,7 @@ function Updateproduct() {
         <div>
             
         <h2 style={{marginTop:"4%",fontSize:50}}> تعديل منتج</h2>    
-        <div className="col-sm-6 offset-sm-3" style={{marginRight:"23%",marginTop:"10%"}}>
+        <div className="col-sm-6 offset-sm-3" style={{marginRight:"23%",marginTop:"1%"}}>
             <br/>
             <input type="file" className="form-control" style={{fontSize:22}}
             onChange={(e)=>setFile(e.target.value)}

@@ -7,8 +7,7 @@ import * as FiFeather from "react-icons/fi"
 import {
   MDBIcon } from 'mdb-react-ui-kit';
   import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn } from 'mdb-react-ui-kit';
-
-function AddProduct() {
+  function AddProduct() {
     const [file, setFile]= useState("");
     const [name, setName]= useState("");
     const [noOfPage, setNoOfPage]= useState("");
@@ -36,7 +35,7 @@ function AddProduct() {
     return (
         <div>
         <h2 style={{marginTop:"4%",fontSize:50}}> اضافة منتج</h2>    
-        <div className="col-sm-6 offset-sm-3" style={{marginRight:"23%",marginTop:"10%"}}>
+        <div className="col-sm-6 offset-sm-3" style={{marginRight:"23%",marginTop:"1%"}}>
             <br/>
             <input type="file" className="form-control"
             onChange={(e)=>setFile(e.target.value)}

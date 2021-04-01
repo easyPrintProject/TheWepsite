@@ -48,15 +48,15 @@ function Register() {
 
         <div className="form-group">
           <label htmlFor="Name"> الاسم الكامل لمالك المطبعة</label>
-          <input type="text" name="Name" onChange={(e) => setFullName(e.target.value)} />
+          <input className="form-control" type="text" name="Name" onChange={(e) => setFullName(e.target.value)} />
         </div>
         <div className="form-group">
           <label htmlFor="Phone" >رقم الجوال</label>
-          <input type="text" name="Phone"  onChange={(e) => setPhoneNumber(e.target.value)}  />
+          <input className="form-control" type="text" name="Phone"  onChange={(e) => setPhoneNumber(e.target.value)}  />
         </div>
         <div className="form-group">
           <label htmlFor="Email" >البريد الإلكتروني</label>
-          <input type="email" name="Eamil"  onChange={(e) => setEmail(e.target.value)}/>
+          <input className="form-control" type="email" name="Eamil"  onChange={(e) => setEmail(e.target.value)}/>
         </div>
         {/* <div className="form-group">
           <label htmlFor="CoName"> الاسم التجاري</label>
@@ -68,19 +68,19 @@ function Register() {
         </div> */}
         <div className="form-group">
           <label htmlFor="password" > كلمة السر </label>
-          <input type="password" name="password"
+          <input className="form-control" type="password" name="password"
             // onChange = {(event,newValue) => this.setState({password:newValue})}
             onChange={(e) => setPassword(e.target.value)}  />
         </div>
         <div className="form-group">
           <label htmlFor="password"> تأكيد كلمة السر </label>
-          <input type="password" name="password" />
+          <input className="form-control" type="password" name="password" />
         </div>
       </div>
     </div>
     <div className="footer">
       <Link to="./PrintingShopInfo">
-      <button type="button" className="btn">
+      <button type="button" className="btn" style={{fontSize: 17}}>
         التالي
       </button></Link>
     </div>
