@@ -42,7 +42,7 @@ function Footer() {
       </MDBContainer>
       <div className="footer-copyright text-center py-3" style={{ color: '#FFF'}}>
         <MDBContainer fluid>
-          &copy; {new Date().getFullYear()} Copyright: <a href="home"  style={{ color: 'black'}}> EasyPrint.com </a>
+          &copy; {new Date().getFullYear()} Copyright: <a href="home"  style={{ color: 'black'}}> EasyPrint</a>
         </MDBContainer>
       </div>
     </MDBFooter>
