@@ -18,12 +18,9 @@
 
     }
   .sub-header{
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     font-family:'Tajawal';
-
-
-
   }
   .sub-header2{
     text-align: center;
@@ -63,6 +60,7 @@
           align-items: right;
           width: fit-content;
           text-align: right;
+          margin: 5px;
          
         }
           input {
@@ -93,6 +91,14 @@
       font-family:'Tajawal';
       font-size: 15;
 
+    }
+
+    .message {
+      margin-top: 10px;
+      font-size: 13px; 
+    }
+    .error{
+      color:tomato;
     }
 
    

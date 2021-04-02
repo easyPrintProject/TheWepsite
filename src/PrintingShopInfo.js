@@ -25,17 +25,17 @@ function PrintingShopInfo() {
 
     <div className="content">
     <div className="steps-bar" >
-    <button style={{backgroundColor:"gray", marginRight:10, marginLeft:10}} type="button" class="btn btn  btn-lg btn-floating" disabled>
-    <MDBIcon className='ms-1 ' icon='check' size='lg' color="white" />
-    </button>
-    <MDBIcon className='ms-1 ' icon='arrow-left' size='lg' color="gray" />
-
-    <button style={{backgroundColor:"gray", marginRight:10, marginLeft:10}} type="button" class="btn btn  btn-lg btn-floating" disabled>
-    <MDBIcon className='ms-1 ' icon='check' size='lg' color="white" />
-    </button>
-    <MDBIcon className='ms-1 ' icon='arrow-left' size='lg' color="gray" />
-
     <button style={{backgroundColor:"green", marginRight:10, marginLeft:10}} type="button" class="btn btn  btn-lg btn-floating" disabled>
+    <MDBIcon className='ms-1 ' icon='check' size='lg' color="white" />
+    </button>
+    <MDBIcon className='ms-1 ' icon='arrow-left' size='lg' color="gray" />
+
+    <button style={{backgroundColor:"gray", marginRight:10, marginLeft:10}} type="button" class="btn btn  btn-lg btn-floating" disabled>
+    <MDBIcon className='ms-1 ' icon='check' size='lg' color="white" />
+    </button>
+    <MDBIcon className='ms-1 ' icon='arrow-left' size='lg' color="gray" />
+
+    <button style={{backgroundColor:"grey", marginRight:10, marginLeft:10}} type="button" class="btn btn  btn-lg btn-floating" disabled>
     <MDBIcon className='ms-1 ' icon='check' size='lg' color="white" />
     </button>
     </div>
