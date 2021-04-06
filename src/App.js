@@ -26,8 +26,7 @@ import Proplem from "./Proplem"
 import Store from "./components/Store"
 import Updateproduct from "./Updateproduct"
 import UpdatePrintingShopInfo from "./UpdatePrintingShopInfo"
-
-
+import ProductActions from "./ProductActions"
 
 
 function App() {
@@ -58,9 +57,9 @@ function App() {
         <Route path="/JoinRequestAdmin">  <JoinRequestAdmin />   </Route>
         <Route path="/Proplem">  <Proplem />   </Route>
         <Route path="/Updateproduct">  <Updateproduct />   </Route>
-        
-        <Route path="/UpdatePrintingShopInfo">  <UpdatePrintingShopInfo />   </Route>
+        <Route path="/ProductActions">  <ProductActions />   </Route>
 
+        <Route path="/UpdatePrintingShopInfo">  <UpdatePrintingShopInfo />   </Route>
         <Route path="/Dachboard">  <Dachboard />   </Route>
         
   
