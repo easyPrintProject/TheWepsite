@@ -1,13 +1,11 @@
 import React, {useState} from 'react'
-import { Link } from "react-router-dom";
-import { Button, Modal } from 'react-bootstrap';
-import { IconContext } from 'react-icons';
-import * as FaIcons from 'react-icons/fa';
-import * as FiFeather from "react-icons/fi"
-import {
-  MDBIcon } from 'mdb-react-ui-kit';
-  import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn } from 'mdb-react-ui-kit';
-  function AddProduct() {
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import DeleteIcon from '@material-ui/icons/Delete';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+
+function Updateproduct() {
     const [file, setFile]= useState("");
     const [name, setName]= useState("");
     const [noOfPage, setNoOfPage]= useState("");
@@ -15,7 +13,7 @@ import {
     const [description, setdescription]= useState("");
     const [price, setPrice]= useState("");
 
-    function addProduct(){
+    function Updateproduct(){
         console.warn(file,name,noOfPage,printType,description,price)
         const formData = new FormData();
         formData.append('file', file);
@@ -34,39 +32,45 @@ import {
     }
     return (
         <div>
-        <h2 style={{marginTop:"4%",fontSize:50}}> اضافة منتج</h2>    
+            
+        <h2 style={{marginTop:"4%",fontSize:50}}> تعديل منتج</h2>    
         <div className="col-sm-6 offset-sm-3" style={{marginRight:"23%",marginTop:"1%"}}>
             <br/>
-            <input type="file" className="form-control"
+            <input type="file" className="form-control" style={{fontSize:22}}
             onChange={(e)=>setFile(e.target.value)}
             placeholder="صورة الملزمة" /> <br/>
-            <input type="text" className="form-control"
+            <input type="text" className="form-control" style={{fontSize:22}}
             onChange={(e)=>setName(e.target.value)}
              placeholder="اسم الملزمة" /> <br/>
-            <input type="text" className="form-control"
+            <input type="text" className="form-control" style={{fontSize:22}}
             onChange={(e)=>setNoOfPage(e.target.value)}
              placeholder="عدد الصفحات" /> <br/>
-            <input type="text" className="form-control form-control-sm"
+            <input type="text" className="form-control form-control-sm" style={{fontSize:22}}
             onChange={(e)=>setPrintType(e.target.value)}
             placeholder="نوع الطباعة" />  <br/>
-            <input type="text" className="form-control" 
+            <input type="text" className="form-control" style={{fontSize:22}}
             onChange={(e)=>setdescription(e.target.value)}
             placeholder="الوصف" /> <br/>
-            <input type="text" className="form-control" placeholder="السعر" 
+            <input type="text" className="form-control" placeholder="السعر" style={{fontSize:22}}
             onChange={(e)=>setPrice(e.target.value)}
                         /> <br/>
-        
-           <div style={{marginBottom:111}}> 
+     
+ 
+
+
+      
+      <div style={{marginBottom:111}}> 
     
-    <Button variant="contained" size="large" color="#4a87e3" onClick={addProduct}  >
-      اضافة الملزمة
-    </Button>
-
-  </div>
-        </div>
-
-        </div>
-    )
+        <Button variant="contained" size="large" color="#4a87e3"  >
+          تحديث
+        </Button>
+    
+      </div>
+     
+    </div></div>
+  );
 }
 
-export default AddProduct
+
+
+export default Updateproduct

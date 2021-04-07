@@ -12,6 +12,23 @@ function Login() {
   const [password, setPassword] = useState("");
   const [user, setUser] = useState({Email:"", UserName:"", PhoneNumber:"",  EmailConf:false, errorMassage:"", Id:"", Token:""});
   const[info, setInfo] = useState({Email:"omar@gmail.com", PasswordHash:"raghad221"});
+  const [isValid, setIsValid] = useState(false);
+  const [message, setMessage] = useState('');
+
+
+const emailPattren = /\S+@\S+\.\S+/;
+
+  const validateEmail = (event) => {
+    const email = event.target.value;
+    if (emailPattren.test(email)) {
+      setIsValid(true);
+      setMessage('');
+
+    } else {
+      setIsValid(false);
+      setMessage('الرجاء كتابة بريد إلكتروني صحيح');
+    }
+  };
 
 
    useEffect(() => {
@@ -51,22 +68,28 @@ function Login() {
           </div>
           <div className="form">
             <div className="form-group">
-              <label htmlFor="CoName">: الأيميل </label>
-              <input type="text" name="Email" 
-               onChange={(e) => setEmail(e.target.value)}/>
+              <label htmlFor="CoName"> البريد الإلكتروني </label>
+              <input className="form-control" type="text" name="Email" 
+               onInput={(e) => setEmail(e.target.value)}
+               onChange={validateEmail}/>
+               <div className={`message ${isValid ? 'success' : 'error'}`}>
+        {message}
+      </div>
             </div>
            
             <div className="form-group">
-              <label htmlFor="password">: كلمة السر </label>
-              <input type="password" name="password"
-                 onChange={(e) => setPassword(e.target.value)}/>
+              <label htmlFor="password"> كلمة السر </label>
+              <input className="form-control" type="password" name="password"
+                 onInput={(e) => setPassword(e.target.value)} 
+                 />
+                 
             </div>
         
           </div>
         </div>
         <div className="footer">
           
-          <button type="button" className="btn" onClick={Login}>
+          <button type="button" className="btn" style={{fontSize: 17}} onClick={Login}>
              تسجيل الدخول
           </button>
         </div>

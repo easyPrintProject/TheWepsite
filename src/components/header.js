@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from "react-router-dom";
-
 import {
     MDBNavbar,
     MDBNavbarNav,
@@ -10,6 +9,7 @@ import {
     MDBContainer,
     MDBNavbarToggler,
     MDBBtn,
+    MDBNavbarBrand,
     MDBIcon } from 'mdb-react-ui-kit';
 
 function header() {
@@ -28,30 +28,39 @@ function header() {
         <div className='collapse navbar-collapse' id='navbarExample01'>
           <MDBNavbarNav right  className='mb-2 mb-lg-0'>
             <MDBNavbarItem >
-            <Link to="./home">
+            <Link to="./home" style={{fontFamily: 'Tajawal' , fontWeight: 'bolder'}}>
               <MDBNavbarLink aria-current='page' >
                 الصفحة الرئيسية
               </MDBNavbarLink></Link>
             </MDBNavbarItem>
-
             <MDBNavbarItem>
-            <Link to="./features">
+            <Link to="./Login" style={{fontFamily: 'Tajawal'}}>
+              <MDBNavbarLink >تسجيل الدخول</MDBNavbarLink></Link>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+            <Link to="./features" style={{fontFamily: 'Tajawal'}}>
               <MDBNavbarLink >المميزات</MDBNavbarLink></Link>
             </MDBNavbarItem>
             <MDBNavbarItem>
-            <Link to="./Pricing">
+            <Link to="./Pricing" style={{fontFamily: 'Tajawal'}}>
               <MDBNavbarLink >الأسعار</MDBNavbarLink></Link>
             </MDBNavbarItem>
             <MDBNavbarItem>
-            <Link to="./About">
+            <Link to="./About" style={{fontFamily: 'Tajawal'}}>
               <MDBNavbarLink >المزيد عنا</MDBNavbarLink></Link>
             </MDBNavbarItem>
 
           </MDBNavbarNav>
-          <Link to="./Login">
-          <MDBBtn className='m-1' style={{ backgroundColor: '#333333' }} >
-          <MDBIcon className='ms-1' icon='user' size='lg' />
-      </MDBBtn>  </Link>
+        
+            
+          <MDBNavbarBrand href='home'>
+            <img
+              src='https://j.top4top.io/p_191710ex01.jpeg'
+              height='45'
+              alt=''
+              loading='lazy'
+            />
+          </MDBNavbarBrand>
         </div>
       </MDBContainer>
     </MDBNavbar>

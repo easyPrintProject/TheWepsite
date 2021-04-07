@@ -24,51 +24,55 @@ function AddDrivers() {
   const [errorMassage, setErrorMassage] =  React.useState("");
 
     return (
-        <div><h1 className="header"> أضافة سائق</h1>
+        <div>   <div   className='p-5 text-center bg-image'
+      style={{ backgroundImage: "url('https://image.freepik.com/vetores-gratis/homem-dirigindo-uma-motocicleta-sobre-um-mapa-de-gps-em-um-telefone-inteligente-servico-de-entrega_211621-33.jpg')", height: 400,width:500,marginRight:"33%"}}
+     >
+     
+      </div>
+      
+       <h1 className="header"> إضافة سائق</h1>
          <h2 className="sub-header">خاص بشركات ومؤسسات الطباعة والنسخ والتصوير</h2>
   
 
     <div className="content">
-    <div   className='p-5 text-center bg-image'
-      style={{ backgroundImage: "url('https://image.freepik.com/vetores-gratis/homem-dirigindo-uma-motocicleta-sobre-um-mapa-de-gps-em-um-telefone-inteligente-servico-de-entrega_211621-33.jpg')", height: 200,width:200,marginLeft:450 }}
-    >
+ 
 
-    </div>
+
       
       <div className="form">
 
         <div className="form-group">
           <label htmlFor="Name"> الاسم الكامل  </label>
-          <input type="text" name="Name" onChange={(e) => setFullName(e.target.value)} />
+          <input className="form-control" type="text" name="Name" onChange={(e) => setFullName(e.target.value)} />
         </div>
         <div className="form-group">
           <label htmlFor="Phone" >رقم الجوال</label>
-          <input type="text" name="Phone"  onChange={(e) => setPhoneNumber(e.target.value)}  />
+          <input className="form-control" type="text" name="Phone"  onChange={(e) => setPhoneNumber(e.target.value)}  />
         </div>
         <div className="form-group">
           <label htmlFor="Email" >البريد الإلكتروني</label>
-          <input type="email" name="Eamil"  onChange={(e) => setEmail(e.target.value)}/>
+          <input className="form-control" type="email" name="Eamil"  onChange={(e) => setEmail(e.target.value)}/>
         </div>
        
         <div className="form-group">
           <label htmlFor="password" > كلمة السر </label>
-          <input type="password" name="password"
+          <input className="form-control" type="password" name="password"
             // onChange = {(event,newValue) => this.setState({password:newValue})}
             onChange={(e) => setPassword(e.target.value)}  />
         </div>
         <div className="form-group">
           <label htmlFor="password"> تأكيد كلمة السر </label>
-          <input type="password" name="password" />
+          <input className="form-control" type="password" name="password" />
         </div>
       </div>
     </div>
     <div className="footer">
-      <button type="button" className="btn" onClick={handleShow}>
+      <button type="button" className="btn" style={{fontSize:17}} onClick={handleShow}>
         التالي
       </button>
-    <Modal show={show} onHide={handleClose}>
+    <Modal show={show} onHide={handleClose}  className='test'> 
         <Modal.Header closeButton>
-          <Modal.Title>! تهانينا </Modal.Title>
+          <Modal.Title>تهانينا! </Modal.Title>
         </Modal.Header>
         <Modal.Body>تمت عمليت التسجيل بنجاح, سيتم مراجعة معلوماتك وتفعيل حسابك خلال 24 ساعة </Modal.Body>
         <Modal.Footer>

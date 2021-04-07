@@ -1,47 +1,51 @@
 import React from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter } from 'mdb-react-ui-kit';
 
 function Footer() {
-  return ( <div className="base-container">   
+  return ( 
   <div className="main-footer">
     
-  
-        <div className="row">
-       
-          <div className="col">
-            
-            <h2 className="list-unstyled" style={{marginRight:20,marginTop:33}}>
-            <Link to="./About" style={{ color: '#FFF' }}>
-            <h4>مين ايزي برنت؟</h4>
+  <MDBFooter color="blue" className="font-small pt-4 mt-4">
+      <MDBContainer fluid className="text-center text-md-left">
+        <MDBRow>
+          <MDBCol md="6">
+          <Link to="./About" style={{ color: '#FFF',fontFamily:'Tajawal' }}>
+            <h5 className="title" style={{fontSize:18}}>من نحن</h5>
             </Link>
-    
-            </h2>
-          </div>
-      
-          {/* Column3 */}
-          <div className="col" style={{marginRight:20,marginTop:33}}>
-                <ui className="list-unstyled">
-              <Link to="./Branchprinter" style={{ color: '#FFF' }}> 
-              <li style={{fontSize:23,marginTop:-10}}>أفرع ايزي برنت</li>
+            <Link to="./Branchprinter" style={{ color: '#FFF', fontFamily:'Tajawal' }}> 
+              <h5 className="title " style={{fontSize:17}}>مزودي الخدمة لدينا</h5>
            </Link>
-           </ui>
-           
-            <ui style={{ color: '#FFF',fontSize:20 }}> 
+            <Link to="./register" style={{ color: '#FFF',fontFamily:'Tajawal' }}>
+            <h5 className="title" style={{fontSize:17}}>
+              التسجيل كمزود خدمة</h5>
+            </Link>
+
+          
+          </MDBCol>
+          <div className="col" style={{marginRight:20, marginTop: 4}}>
               
-منصة الطباعة السهلة الإلكترونية
-طالبات جامعة طيبة - قسم نظم معلومات
-            </ui>
+           
+            <h5 style={{ color: '#FFF',fontSize:17 , fontFamily:'Tajawal', }}> 
+              
+منصة ايزي برنت الإلكترونية
+            </h5>
+            <h5 style={{ color: '#FFF',fontSize:17 , fontFamily:'Tajawal',}}>تطوير طالبات جامعة طيبة
+</h5>
+<h5 style={{ color: '#FFF',fontSize:17 , fontFamily:'Tajawal',}}>قسم نظم معلومات
+</h5>
+
           </div>
-        </div>
-        <hr />
-        <div className="row">
-          <p>
-            &copy;{new Date().getFullYear()} THICC MEMES | All rights reserved |
-            Terms Of Service | Privacy
-          </p>
-        </div>
+
+        </MDBRow>
+      </MDBContainer>
+      <div className="footer-copyright text-center py-3" style={{ color: '#FFF'}}>
+        <MDBContainer fluid>
+          &copy; {new Date().getFullYear()} Copyright: <a href="home"  style={{ color: 'black'}}> EasyPrint</a>
+        </MDBContainer>
       </div>
+    </MDBFooter>
     </div>
   );
 }
