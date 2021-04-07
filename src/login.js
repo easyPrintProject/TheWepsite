@@ -43,7 +43,7 @@ const emailPattren = /\S+@\S+\.\S+/;
    }, [user]) //will only run when then app component loads
   
   const Login = async () => {
-    axios.post("https://localhost:44399/api/PrintingShopLogin", {Email:email, PasswordHash:password})
+    axios.post("https://apieasyprint20210215153907.azurewebsites.net/api/PrintingShopLogin", {Email:email, PasswordHash:password})
     .then(response => {
       dispatch({type: 'SET_USER', payload: response.data});
       setUser({
