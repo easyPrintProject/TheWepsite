@@ -1,10 +1,14 @@
-import React, {  useState } from 'react'
+import React, {  useState, useEffect,useContext } from 'react'
 import { Link } from "react-router-dom";
 import { Button, Modal, Table, Container,FormGroup} from 'react-bootstrap';
+import axios from 'axios';
 
-
+import {  useHistory } from "react-router-dom";
+import {Context} from "./components/Store"
 
 export function ProductActions() {
+  const history = useHistory();
+  const [state, dispatch] = useContext(Context);
 
     const productInfo = [
     { 
@@ -17,7 +21,21 @@ export function ProductActions() {
          price: "32 ريال" },
 
   ];
+  useEffect(() => {
+    axios.get("https://apieasyprint20210215153907.azurewebsites.net/api/CourceMaterial/"+state.user.data.printerId)
+    .then(response => {
+     console.log(response.data);
+      setAllProduct(
+       response.data
+        );
+    }).catch(error => {
+      console.log(error.response)
+  });
+  }, []) //will only run when then app component loads
+ 
+  
   // States ~
+  const [allProducts, setAllProduct] = useState([]);
   const [data, setData] = useState(productInfo);
   const [modalInsert, setModalInsert] = useState(false);
   const [modalEdit, setModalEdit] = useState(false);
@@ -83,40 +101,35 @@ export function ProductActions() {
     <Container>
       <h1 className="header">إدارة المنتجات</h1>
       <br />
-      <Button  className='test' style={{ backgroundColor: 'green'}}
-       onClick={() => openModalInsert()}>اضافة منتج</Button>
+      <Link to="/addProduct"><Button  className='test' style={{ backgroundColor: 'green'}}
+      //  onClick={() => openModalInsert()}
+       >اضافة منتج</Button></Link>
     
       <br /> <br />
       <Table className="test" style={{fontSize:"19px"}} >
         <thead>
           <tr>
-          <th>ID</th>
-            <th>الغلاف</th>
             <th>اسم الملزمة</th>
-            <th>عدد الصفحات</th>
-            <th>نوع الطباعة</th>
+            <th>التوفر</th>
             <th>الوصف</th>
             <th>السعر</th>
             <th>إدارة المنتجات</th>
           </tr>
         </thead>
         <tbody>
-          {data.map((product) => (
+          {allProducts.map((allProducts) => (
             <tr style={{fontSize:"18px", textAlign: 'center'}}>
-              <td>{product.id}</td>
-              <td>{product.file}</td>
-              <td>{product.name}</td>
-              <td>{product.noOfPage}</td>
-              <td>{product.printType}</td>
-              <td style={{height: '120px' , width: '130px'}}>{product.description}</td>
-              <td>{product.price}</td>
+              <td>{allProducts.courceMaterialTitle}</td>
+              <td>{allProducts.isAvailable}</td>
+              <td style={{height: '120px' , width: '130px'}}>{allProducts.courceMaterialTitle}</td>
+              <td>{allProducts.courceMaterialPrice}</td>
               <td>                                 
               
               {/* Edit and delete buttons */}
                 <button className="btn btn-primary"
-                 onClick={() =>selectProduct(product, 'Edit')}>تعديل</button>{' '}
+                 onClick={() =>selectProduct(allProducts, 'Edit')}>تعديل</button>{' '}
                 <button className="btn btn-danger" 
-                onClick={() =>selectProduct(product, 'Delete')}>حذف</button>
+                onClick={() =>selectProduct(allProducts, 'Delete')}>حذف</button>
               </td>
             </tr>
             ))
