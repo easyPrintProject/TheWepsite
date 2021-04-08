@@ -7,7 +7,7 @@ import * as FiFeather from "react-icons/fi"
 import axios from 'axios';
 import {  useHistory } from "react-router-dom";
 import {Context} from "./components/Store"
-
+ 
 import {
   MDBIcon } from 'mdb-react-ui-kit';
   import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn } from 'mdb-react-ui-kit';
@@ -30,6 +30,7 @@ import {
                                                                 SubjectId:"A93F96CE-1CF1-4279-AB13-91F9B34F4C45"
                                                               })
       .then(response => {
+        history.push("./ProductActions")
        if (response==true){
         alert("تم حفظ المنتج بنجاح") 
        }

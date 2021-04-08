@@ -5,6 +5,13 @@ import { Link, useHistory } from "react-router-dom";
 import {Context} from "./components/Store"
 
 function Login() {
+  const api = axios.create({
+    baseURL: 'https://apieasyprint20210215153907.azurewebsites.net/api/PrintingShopLogin',
+    headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-type': 'application/json',
+    },
+});
 
   const history = useHistory();
   const [state, dispatch] = useContext(Context);
