@@ -1,11 +1,14 @@
-import React, {  useState, useEffect } from 'react'
+import React, {  useState, useEffect,useContext } from 'react'
 import { Link } from "react-router-dom";
 import { Button, Modal, Table, Container,FormGroup} from 'react-bootstrap';
 import axios from 'axios';
 
-
+import {  useHistory } from "react-router-dom";
+import {Context} from "./components/Store"
 
 export function ProductActions() {
+  const history = useHistory();
+  const [state, dispatch] = useContext(Context);
 
     const productInfo = [
     { 
@@ -19,7 +22,7 @@ export function ProductActions() {
 
   ];
   useEffect(() => {
-    axios.get("https://apieasyprint20210215153907.azurewebsites.net/api/CourceMaterial/76e63083-070c-491a-bfd3-7640c0c95a5d")
+    axios.get("https://apieasyprint20210215153907.azurewebsites.net/api/CourceMaterial/"+state.user.data.printerId)
     .then(response => {
      console.log(response.data);
       setAllProduct(
@@ -98,8 +101,9 @@ export function ProductActions() {
     <Container>
       <h1 className="header">إدارة المنتجات</h1>
       <br />
-      <Button  className='test' style={{ backgroundColor: 'green'}}
-       onClick={() => openModalInsert()}>اضافة منتج</Button>
+      <Link to="/addProduct"><Button  className='test' style={{ backgroundColor: 'green'}}
+      //  onClick={() => openModalInsert()}
+       >اضافة منتج</Button></Link>
     
       <br /> <br />
       <Table className="test" style={{fontSize:"19px"}} >
