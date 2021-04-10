@@ -1,14 +1,11 @@
-import React, { useState } from "react";
-import './register.css';
+import './Register.css';
 import axios from 'axios';
 import { Link, useHistory } from "react-router-dom";
 import {Context} from "./components/Store"
+import React, { useEffect, useState ,useContext} from "react";
 
 
-import {
-  MDBIcon
-} from 'mdb-react-ui-kit';
-import { Link } from "react-router-dom";
+import {MDBIcon} from 'mdb-react-ui-kit';
 
 
 
@@ -86,7 +83,8 @@ const [state, dispatch] = useContext(Context);
   }
 
   const Register = async () => {
-    axios.post("https://apieasyprint20210215153907.azurewebsites.net/api/PrintingShopRigester", {Email:email, PasswordHash:password,FullName:fullName,PhoneNumber:phoneNumber})
+    axios.post("https://apieasyprint20210215153907.azurewebsites.net/api/PrintingShopRigester",
+     {Email:email, PasswordHash:password,FullName:fullName,PhoneNumber:phoneNumber})
     .then(response => {
       dispatch({type: 'SET_USER', payload: response.data});
       setUser({

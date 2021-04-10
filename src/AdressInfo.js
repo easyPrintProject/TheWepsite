@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import {MDBIcon } from 'mdb-react-ui-kit';
-  import { Link } from "react-router-dom";
   import { Button, Modal } from 'react-bootstrap';
-
+  import {  useHistory } from "react-router-dom";
+  import axios from 'axios';
+  import {Context} from "./components/Store"
+  
+  
   import './adressInfo.css';
 
 function AdressInfo() {
@@ -22,6 +25,7 @@ const history = useHistory();
   const [street, setStreet] =  React.useState("");
   const [adressLine, setAdressLine] =  React.useState();
   const [postcode, setPostcode] =  React.useState("");
+  const [Address, setAddress] =  React.useState();
 
   //modat states 
   const [show, setShow] = useState(false);

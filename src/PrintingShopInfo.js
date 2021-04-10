@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import {MDBIcon } from 'mdb-react-ui-kit';
   import { Link } from "react-router-dom";
 import './PrintingShopInfo.css';
-import { Button, Modal, Form } from 'react-bootstrap';
 import {  useHistory } from "react-router-dom";
+import axios from 'axios';
+import {Context} from "./components/Store"
+
+
 
 
 
