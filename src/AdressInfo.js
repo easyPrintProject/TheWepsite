@@ -1,23 +1,71 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import {MDBIcon } from 'mdb-react-ui-kit';
-  import { Link } from "react-router-dom";
   import { Button, Modal } from 'react-bootstrap';
-
+  import {  useHistory } from "react-router-dom";
+  import axios from 'axios';
+  import {Context} from "./components/Store"
+  
+  
   import './adressInfo.css';
 
 function AdressInfo() {
-   //form states 
-    const [city, setCity] = React.useState("");
-    const [country, setCountry] =  React.useState("");
-    const [neighborhood, setNeighborhood] =  React.useState("");
-    const [street, setStreet] =  React.useState("");
-    const [adressLine, setAdressLine] =  React.useState();
-    const [postcode, setPostcode] =  React.useState("");
+  const api = axios.create({
+    baseURL: 'https://apieasyprint20210215153907.azurewebsites.net/api/PrintingShopRigester',
+    headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-type': 'application/json',
+    },
+});
 
-    //modat states 
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+const history = useHistory();
+  //form states 
+  const [city, setCity] = React.useState("");
+  const [country, setCountry] =  React.useState("");
+  const [neighborhood, setNeighborhood] =  React.useState("");
+  const [street, setStreet] =  React.useState("");
+  const [adressLine, setAdressLine] =  React.useState();
+  const [postcode, setPostcode] =  React.useState("");
+  const [Address, setAddress] =  React.useState();
+
+  //modat states 
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+//const [ownerId] = useState(state.Id);
+const [state, dispatch] = useContext(Context);
+ 
+
+
+  const AdressInfo = async () => {
+    axios.post("https://apieasyprint20210215153907.azurewebsites.net/api/Address/"+state.user.data.Id, {userId:state.Id,
+     
+    city:city, 
+    neighborhood:neighborhood,
+     street:street,
+     adressLine:adressLine,
+     postcode:postcode,
+     country:country})
+
+    .then(response => {
+      setAddress({
+        userId:state.Id,
+       country: response.data.country,
+       city:response.data.city, 
+       neighborhood:response.data.neighborhood,
+        street:response.data.street,
+        adressLine:response.data.adressLine,
+        postcode:response.data.postcode,})
+      
+       if (response==true){
+        alert("تم التسجيل") 
+       }
+      }).catch(error => {
+        console.log(error.response)
+    });
+
+  }
+
+ 
 
       return (
             <div>
@@ -75,7 +123,7 @@ function AdressInfo() {
         </div>
       </div>
       <div className="footer">
-      <button type="button" className="btn" style={{marginBottom:99, fontSize:15}} onClick={handleShow}>
+      <button type="button" className="btn" style={{marginBottom:99, fontSize:15}} onClick={AdressInfo ,handleShow}>
         التالي
       </button>
 
