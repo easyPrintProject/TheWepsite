@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import './register.css';
+import axios from 'axios';
+import { Link, useHistory } from "react-router-dom";
+import {Context} from "./components/Store"
+
 
 import {
   MDBIcon
@@ -7,17 +11,27 @@ import {
 import { Link } from "react-router-dom";
 
 
-function Register() {
-  const [fullName, setFullName] = React.useState("");
-  const [city, setCity] = React.useState("");
 
-  const [email, setEmail] = React.useState("");
-  const [password, setPassword] = React.useState("");
-  const [confirmPassword, setConfirmPassword] = React.useState("");
-  const [phoneNumber, setPhoneNumber] = React.useState("");
-  const [commercialName, setCommercialName] = React.useState("");
-  const [user, setUser] = React.useState({ Email: "", UserName: "", PhoneNumber: "", EmailConf: false, errorMassage: "", Id: "", Token: "" });
-  const [errorMassage, setErrorMassage] = React.useState("");
+function Register() {
+  const api = axios.create({
+    baseURL: 'https://apieasyprint20210215153907.azurewebsites.net/api/PrintingShopRigester',
+    headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-type': 'application/json',
+    },
+});
+
+const history = useHistory();
+const [state, dispatch] = useContext(Context);
+  const [fullName, setFullName] = useState("");
+ 
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [commercialName, setCommercialName] = useState("");
+  const [user, setUser] = useState({ Email: "", FullName: "", PhoneNumber: "", EmailConf: false, errorMassage: "", Id: "", Token: "" });
+  const [errorMassage, setErrorMassage] = useState("");
   const [isValid, setIsValid] = useState(false);
   const [message, setMessage] = useState('');
   const [isValid2, setIsValid2] = useState(false);
@@ -54,6 +68,7 @@ function Register() {
     }
   }
 
+
   const PassConfirmation = (event) => {
     const ConfirmPassword = event.target.value;
 
@@ -67,6 +82,29 @@ function Register() {
 
 }
 
+
+  }
+
+  const Register = async () => {
+    axios.post("https://apieasyprint20210215153907.azurewebsites.net/api/PrintingShopRigester", {Email:email, PasswordHash:password,FullName:fullName,PhoneNumber:phoneNumber})
+    .then(response => {
+      dispatch({type: 'SET_USER', payload: response.data});
+      setUser({
+        Email: response.data.email,
+        PhoneNumber: response.data.phoneNumber,
+        UserName:response.data.userName, 
+        EmailConf:response.data.emailConfiremd,
+        errorMassage:response.data.errorMessage,
+        Id:response.data.id,
+        Token:response.data.token,
+      })
+      history.push("./PrintingShopInfo")
+       if (response==true){
+        alert("اضغط التالي لاكمال التسجيل") 
+       }
+      }).catch(error => {
+        console.log(error.response)
+    });
 
   }
 
@@ -153,7 +191,7 @@ function Register() {
       </div>
       <div className="footer">
         <Link to="./PrintingShopInfo">
-          <button type="button" className="btn"  style={{ fontSize: 17 }}>
+          <button type="button" className="btn"  style={{ fontSize: 17 }}onClick={Register}>
             التالي
       </button></Link>
       </div>

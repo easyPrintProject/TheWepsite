@@ -3,17 +3,50 @@ import {MDBIcon } from 'mdb-react-ui-kit';
   import { Link } from "react-router-dom";
 import './PrintingShopInfo.css';
 import { Button, Modal, Form } from 'react-bootstrap';
+import {  useHistory } from "react-router-dom";
 
 
 
 function PrintingShopInfo() {
-   const [prenterName, setprenterName] = React.useState("");
-  const [isCourseMaterial, setisCourseMaterial ] = React.useState(true);
-  const [isService, setisService] = React.useState(true);
-  const [commrecialName, setcommrecialName] =  React.useState("");
-  const [city, setcity] =  React.useState("");
-  const [PrintingShopEmail, setPrintingShopEmail] =  React.useState("");
-  const [commrecialNumber, setcommrecialNumber] =  React.useState("");
+    const api = axios.create({
+      baseURL: 'https://apieasyprint20210215153907.azurewebsites.net/api/PrintingShopRigester',
+      headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Content-type': 'application/json',
+      },
+  });
+  
+  const history = useHistory();
+  const [prenterName, setprenterName] = useState("");
+  const [isCourseMaterial, setisCourseMaterial ] = useState(true);
+  const [isService, setisService] = useState(true);
+  const [commrecialName, setcommrecialName] = useState("");
+  const [city, setcity] =  useState("");
+  const [PrintingShopEmail, setPrintingShopEmail] = useState("");
+  const [commrecialNumber, setcommrecialNumber] = useState("");
+  //const [ownerId] = useState(state.Id);
+  const [state, dispatch] = useContext(Context);
+   
+  
+  
+    const PrintingShopInfo = async () => {
+      axios.post("https://apieasyprint20210215153907.azurewebsites.net/api/PrintingShop"+state.user.data.Id, {PrenterName:prenterName, IsCourseMaterial:isCourseMaterial,IsService:isService})
+      .then(response => {
+        
+        history.push("./AdressInfo")
+         if (response==true){
+          alert("اضغط التالي لاكمال التسجيل") 
+         }
+        }).catch(error => {
+          console.log(error.response)
+      });
+  
+    }
+  
+  
+
+  
+  
   
     return (
           <div>
@@ -77,7 +110,7 @@ function PrintingShopInfo() {
     </div>
     <div className="footer">
       <Link to="./AdressInfo">
-      <button type="button" className="btn" style={{marginBottom:99, fontSize:15}} >
+      <button type="button" className="btn" style={{marginBottom:99, fontSize:15}} onClick={PrintingShopInfo} >
         التالي
       </button></Link>
     </div>
