@@ -100,10 +100,10 @@ function PrintShopProfile() {
                 <MDBBtn color="darkslategray" size="lg" outline rounded href="#"> الطلبات السابقة</MDBBtn>
 
             </div> */}
-            <div>
+            <div   style={{marginRight:"23%",marginTop:"1%"}}>
               <OrderActionc />
             </div>
-            <div>
+            <div   style={{marginRight:"23%",marginTop:"1%"}}>
               <ProductActions />
 
             </div>

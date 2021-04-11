@@ -19,6 +19,22 @@ const columns = [
     {field: 'customerId',hide:true},
     {field: 'customerName', headerName: 'ايميل العميل', width: 170},
     {field: 'total', headerName: 'الاجمالي', width: 170},
+    {
+      field: '',
+      headerName: 'المزيد',
+      renderCell: () => (
+        <strong>
+          <Button
+            variant="contained"
+            color="primary"
+            size="small"
+            style={{ marginLeft: 16 }}
+          >
+            Open
+          </Button>
+        </strong>
+      ),
+    },
   ];
   
   
@@ -50,7 +66,7 @@ function OrderActionc() {
   }); 
 
      useEffect(() => {
-        axios.get("https://localhost:44399/api/PrinterOrder/A93F96CE-1CF1-4279-AB13-91F9B34F4C77")
+        axios.get("https://apieasyprint20210215153907.azurewebsites.net/api/PrinterOrder/a40756b0-a9a9-4079-8495-d44e45b05f5b")
         .then(response => {
             console.log(response.data);
             setAllOrders(
@@ -65,67 +81,65 @@ function OrderActionc() {
         console.log(allOrders)
       }, [allOrders]) //will only run when then app component loads
 
-  // Funcions = () =>
-  const selectProduct= (element, modify) => {
-    setSelectedProduct(element);
-    (modify === 'Edit') ? setModalEdit(true) : setModalDelete(true);  
-  };
+ 
 
-  const handleChange= (e) => {
-    const {name, value} = e.target;
-    setSelectedProduct((prevState) => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  // Funcions => Insert, edit, delete & order
-  const openModalInsert = () => {
-    setSelectedProduct(null); // Cleaning state.
-    setModalInsert(true);
-  };
-
-  const insert = () => {
-    let insertValue = selectedProduct;
-    let newData = data;
-    newData.push(insertValue);
-    setData(newData);
-    setModalInsert(false);
-  };
-  const edit = () => {
-    let newData = data;
-    newData.forEach( (product) => {
-      if(product.file === selectedProduct.file) {
-        product.id = selectedProduct.id;
-        product.name = selectedProduct.name;
-        product.noOfPage = selectedProduct.noOfPage;
-        product.printType = selectedProduct.printType;
-        product.description = selectedProduct.description;
-        product.price = selectedProduct.price;
-
-      };
-    });
-    setData(newData);
-    setModalEdit(false);
-  };
-
-  const deleteProduct = () => {
-    setData(data.filter( (product) => product.id !== selectedProduct.id) );
-    setModalDelete(false);
-  };
 
     return (
         <div>
-            
-    //  |-------------- Table --------------|  //
+  
     <Container>
       <h1 className="header">إدارة الطلبات</h1>
       <br />
-      <div style={{ height: 400, width: '100%' }}>
-      <DataGrid rows={allOrders} columns={columns} pageSize={5}   />
-    </div>
+      {/* <div style={{ height: 400, width: '100%' }}> */}
+      {/* <DataGrid rows={allOrders} columns={columns} pageSize={5}   /> */}
+    {/* </div> */}
     
       <br /> <br />
+      <br /> <br />
+
+      <Table className="test" style={{fontSize:"19px"}} >
+        <thead>
+          <tr>
+            <th>رقم الطلب </th>
+            <th>حالة الطلب</th>
+            <th>حالة التوصيل</th>
+            <th>تاريخ الطلب</th>
+            <th>ايميل العميل</th>
+            <th> الاجمالي</th>
+            <th> </th>
+
+          </tr>
+        </thead>
+        <tbody>
+          {allOrders.map((Order) => (
+            <tr style={{fontSize:"18px", textAlign: 'center'}}>
+              <td>{Order.itemId}</td>
+              <td>{Order.orderStatus}</td>
+              <td Order={{height: '120px' , width: '130px'}}>{Order.deliveryStatus}</td>
+              <td>{Order.orderDate}</td>
+              <td>                                 
+              {Order.customerName}
+              </td>
+              <td>{Order.total}</td>
+              <td><Button
+            variant="contained"
+            color="primary"
+            size="small"
+            style={{ marginLeft: 16 }}
+          >
+            المزيد
+          </Button></td>
+              
+
+            </tr>
+            ))
+          }
+        </tbody>
+      </Table>
+
+
+      
+
    
 
       
