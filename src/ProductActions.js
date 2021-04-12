@@ -22,7 +22,7 @@ export function ProductActions() {
 
   ];
   useEffect(() => {
-    axios.get("https://apieasyprint20210215153907.azurewebsites.net/api/CourceMaterial/"+state.user.data.printerId)
+    axios.get("https://apieasyprint20210215153907.azurewebsites.net/api/CourceMaterial/a40756b0-a9a9-4079-8495-d44e45b05f5b")
     .then(response => {
      console.log(response.data);
       setAllProduct(

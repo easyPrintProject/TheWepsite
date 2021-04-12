@@ -27,6 +27,7 @@ import Store from "./components/Store"
 import Updateproduct from "./Updateproduct"
 import UpdatePrintingShopInfo from "./UpdatePrintingShopInfo"
 import ProductActions from "./ProductActions"
+import OrderDetailes from "./OrderDetailes"
 
 
 function App() {
@@ -59,7 +60,7 @@ function App() {
         <Route path="/Proplem">  <Proplem />   </Route>
         <Route path="/Updateproduct">  <Updateproduct />   </Route>
         <Route path="/ProductActions">  <ProductActions />   </Route>
-
+        <Route path="/OrderDetailes">  <OrderDetailes />   </Route>
         <Route path="/UpdatePrintingShopInfo">  <UpdatePrintingShopInfo />   </Route>
         <Route path="/Dachboard">  <Dachboard />   </Route>
         

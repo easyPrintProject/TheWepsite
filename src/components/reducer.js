@@ -15,6 +15,11 @@ const Reducer = (state, action) => {
                 ...state,
                 user: action.payload
             };
+        case 'SET_ORDERID':
+            return {
+               ...state,
+               orderId: action.payload
+            };
         default:
             return state;
     }

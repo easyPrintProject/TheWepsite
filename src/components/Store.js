@@ -4,7 +4,8 @@ import Reducer from "./Reducer"
 
 const initialState = {
     user:{},
-    error: null
+    error: null,
+    orderId:""
 };
 
 const Store = ({children}) => {
