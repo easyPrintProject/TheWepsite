@@ -25,7 +25,6 @@ function UpdatePrintingShopInfo() {
 
     return (
           <div style={{marginBottom:111}}>
-<div className="header">  أسم المطبعة</div>
     <h5 className="sub-header2">تحديث معلومات المطبعة</h5>
 
     <div className="content">

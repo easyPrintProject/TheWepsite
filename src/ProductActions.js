@@ -21,20 +21,21 @@ export function ProductActions() {
          price: "32 ريال" },
 
   ];
-  useEffect(() => {
-    axios.get("https://apieasyprint20210215153907.azurewebsites.net/api/CourceMaterial/"+state.user.data.printerId)
-    .then(response => {
-     console.log(response.data);
-      setAllProduct(
-       response.data
-        );
-    }).catch(error => {
-      console.log(error.response)
-  });
-  }, []) //will only run when then app component loads
+  // useEffect(() => {
+  //   axios.get("https://apieasyprint20210215153907.azurewebsites.net/api/CourceMaterial/"+state.user.data.printerId)
+  //    .then(response => {
+  //    console.log(response.data);
+  //     setAllProduct(
+  //      response.data
+  //       );
+  //   }).catch(error => {
+  //     console.log(error.response)
+  // });
+  // }, ) //will only run when then app component loads
  
   
   // States ~
+
   const [allProducts, setAllProduct] = useState([]);
   const [data, setData] = useState(productInfo);
   const [modalInsert, setModalInsert] = useState(false);

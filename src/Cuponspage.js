@@ -49,7 +49,7 @@ import {MDBIcon } from 'mdb-react-ui-kit';
         <Modal.Header closeButton>
           <Modal.Title> تهانينا </Modal.Title>
         </Modal.Header>
-        <Modal.Body>تمت أضافة الكوبون الى(اسم الشخص)</Modal.Body>
+        <Modal.Body>تمت أضافة الكوبون </Modal.Body>
         <Modal.Footer>
           <Button variant="success" onClick={handleClose}>
             تم

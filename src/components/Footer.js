@@ -21,7 +21,10 @@ function Footer() {
             <h5 className="title" style={{fontSize:17}}>
               التسجيل كمزود خدمة</h5>
             </Link>
-
+            <Link to="./HomeAdmin" style={{ color: '#FFF',fontFamily:'Tajawal' }}>
+            <h5 className="title" style={{fontSize:17}}>
+                Admin</h5>
+            </Link>
           
           </MDBCol>
           <div className="col" style={{marginRight:20, marginTop: 4}}>
@@ -30,11 +33,15 @@ function Footer() {
             <h5 style={{ color: '#FFF',fontSize:17 , fontFamily:'Tajawal', }}> 
               
 منصة ايزي برنت الإلكترونية
-            </h5>
+            </h5>PrivacyPolicy
             <h5 style={{ color: '#FFF',fontSize:17 , fontFamily:'Tajawal',}}>تطوير طالبات جامعة طيبة
 </h5>
 <h5 style={{ color: '#FFF',fontSize:17 , fontFamily:'Tajawal',}}>قسم نظم معلومات
 </h5>
+<Link to="./PrivacyPolicy" style={{ color: '#FFF',fontFamily:'Tajawal' }}>
+            <h5 className="title" style={{fontSize:17}}>
+            الشروط والأحكام</h5>
+            </Link>
 
           </div>
 

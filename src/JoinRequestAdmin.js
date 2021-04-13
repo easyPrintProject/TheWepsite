@@ -10,14 +10,44 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: "20%",
+    width:"50%"
   },
 });
 
  function JoinRequestAdmin() {
   const classes = useStyles();
 
-  return (    <Card className={classes.root} style={{margin:"30%",marginLeft:-190}}>
+  return (    <Card className={classes.root} style={{margin:"10%",marginLeft:-190}}>
+  
+  <CardActionArea >
+    <CardMedia
+     
+      alt="Contemplative Reptile"
+      height="40"
+      title="Contemplative Reptile"
+    />
+    <CardContent>
+      <Typography gutterBottom variant="h3" component="h2">
+        اسم المكتبه
+      </Typography>
+      <Typography variant="body2" color="textSecondary" variant="h4" component="h4">
+   بياناتها
+      </Typography>
+    </CardContent>
+  </CardActionArea>
+  <CardActions style={{margin:"10%",marginLeft:-19,padding:9}}>
+  <Button variant="outlined" color="primary" >
+  قبول
+</Button>
+<div style={{margin:"15%"}}>
+
+</div>
+    <Button variant="outlined" color="secondary"  >
+  رفض
+</Button>
+  </CardActions>
+  
   <CardActionArea >
     <CardMedia
      
@@ -26,10 +56,10 @@ const useStyles = makeStyles({
       title="Contemplative Reptile"
     />
     <CardContent>
-      <Typography gutterBottom variant="h5" component="h2">
+      <Typography gutterBottom variant="h3" component="h2">
         اسم المكتبه
       </Typography>
-      <Typography variant="body2" color="textSecondary" component="p">
+      <Typography variant="body2" color="textSecondary" variant="h4" component="h4">
    بياناتها
       </Typography>
     </CardContent>
@@ -45,6 +75,7 @@ const useStyles = makeStyles({
   رفض
 </Button>
   </CardActions>
+  
 </Card>
 );
 }
