@@ -44,7 +44,7 @@ const Data = [
     },
     {
       title: 'اضافة كوبون',
-      path: '/addCoupons',
+      path: '/Cuponspage',
       icon: <FiFeather.FiPercent />,
       cName: 'nav-text'
     },

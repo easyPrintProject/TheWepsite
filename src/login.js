@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react'
-import './register.css'
+import './Register.css'
 import axios from 'axios';
 import { Link, useHistory } from "react-router-dom";
 import {Context} from "./components/Store"

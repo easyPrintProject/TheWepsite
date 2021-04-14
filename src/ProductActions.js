@@ -21,6 +21,7 @@ export function ProductActions() {
          price: "32 ريال" },
 
   ];
+
   useEffect(() => {
     axios.get("https://apieasyprint20210215153907.azurewebsites.net/api/CourceMaterial/a40756b0-a9a9-4079-8495-d44e45b05f5b")
     .then(response => {
@@ -31,10 +32,10 @@ export function ProductActions() {
     }).catch(error => {
       console.log(error.response)
   });
-  }, []) //will only run when then app component loads
- 
+  }, [])
   
   // States ~
+
   const [allProducts, setAllProduct] = useState([]);
   const [data, setData] = useState(productInfo);
   const [modalInsert, setModalInsert] = useState(false);
