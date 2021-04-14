@@ -37,25 +37,15 @@ const [state, dispatch] = useContext(Context);
 
 
   const AdressInfo = async () => {
-    axios.post("https://apieasyprint20210215153907.azurewebsites.net/api/Address/"+state.user.data.Id, {userId:state.Id,
-     
-    city:city, 
-    neighborhood:neighborhood,
-     street:street,
-     adressLine:adressLine,
-     postcode:postcode,
-     country:country})
-
+    axios.post("https://apieasyprint20210215153907.azurewebsites.net/api/Address/", {
+      userId:state.user.data.id,
+      city:city, 
+      neighborhood:neighborhood,
+      street:street,
+      adressLine:adressLine,
+      postcode:postcode,
+      country:country})
     .then(response => {
-      setAddress({
-        userId:state.Id,
-       country: response.data.country,
-       city:response.data.city, 
-       neighborhood:response.data.neighborhood,
-        street:response.data.street,
-        adressLine:response.data.adressLine,
-        postcode:response.data.postcode,})
-      
        if (response==true){
         alert("تم التسجيل") 
        }
@@ -109,7 +99,7 @@ const [state, dispatch] = useContext(Context);
           </div>
           <div className="form-group">
             <label htmlFor="Email" > الشارع </label>
-            <input className="form-control" type="email" name="Eamil"  onChange={(e) => setStreet(e.target.value)}/>
+            <input className="form-control" type="text" name="Eamil"  onChange={(e) => setStreet(e.target.value)}/>
           </div>
           <div className="form-group">
             <label htmlFor="City" >  وصف لمعلم قريب  </label>
@@ -117,7 +107,7 @@ const [state, dispatch] = useContext(Context);
           </div> 
           <div className="form-group">
             <label htmlFor="password" > صندوق بريد </label>
-            <input  className="form-control" type="password" name="password"
+            <input  className="form-control" type="text" name="password"
               onChange={(e) => setPostcode(e.target.value)}  />
           </div>
         </div>

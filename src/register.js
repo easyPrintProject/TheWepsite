@@ -21,13 +21,12 @@ function Register() {
 const history = useHistory();
 const [state, dispatch] = useContext(Context);
   const [fullName, setFullName] = useState("");
- 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [commercialName, setCommercialName] = useState("");
-  const [user, setUser] = useState({ Email: "", FullName: "", PhoneNumber: "", EmailConf: false, errorMassage: "", Id: "", Token: "" });
+  const [user, setUser] = useState({});
   const [errorMassage, setErrorMassage] = useState("");
   const [isValid, setIsValid] = useState(false);
   const [message, setMessage] = useState('');
@@ -84,22 +83,13 @@ const [state, dispatch] = useContext(Context);
 
   const Register = async () => {
     axios.post("https://apieasyprint20210215153907.azurewebsites.net/api/PrintingShopRigester",
-     {Email:email, PasswordHash:password,FullName:fullName,PhoneNumber:phoneNumber})
+     {Email:email,FullName:fullName, PasswordHash:password,PhoneNumber:phoneNumber})
     .then(response => {
       dispatch({type: 'SET_USER', payload: response.data});
-      setUser({
-        Email: response.data.email,
-        PhoneNumber: response.data.phoneNumber,
-        UserName:response.data.userName, 
-        EmailConf:response.data.emailConfiremd,
-        errorMassage:response.data.errorMessage,
-        Id:response.data.id,
-        Token:response.data.token,
-      })
+      setUser(
+        response.data
+      )
       history.push("./PrintingShopInfo")
-       if (response==true){
-        alert("اضغط التالي لاكمال التسجيل") 
-       }
       }).catch(error => {
         console.log(error.response)
     });
