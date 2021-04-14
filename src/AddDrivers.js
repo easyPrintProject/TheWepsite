@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import './addDrivers.css';
 import { Button, Modal } from 'react-bootstrap';
+import axios from 'axios';
+import {Context} from "./components/Store"
 
 import {
   MDBIcon } from 'mdb-react-ui-kit';
@@ -23,24 +25,30 @@ function AddDrivers() {
   const [user, setUser] =  React.useState({Email:"", UserName:"", PhoneNumber:"",  EmailConf:false, errorMassage:"", Id:"", Token:""});
   const [errorMassage, setErrorMassage] =  React.useState("");
 
+
+  const Register = async () => {
+    axios.post("https://apieasyprint20210215153907.azurewebsites.net/api/DriverRegister",
+     {Email:email,FullName:fullName, PasswordHash:password,PhoneNumber:phoneNumber, PrintrtId:"a40756b0-a9a9-4079-8495-d44e45b05f5b" })
+    .then(response => {
+      console.log(response)
+      }).catch(error => {
+        console.log(error.response)
+    });
+  }
+
+
+
+
     return (
         <div>   <div   className='p-5 text-center bg-image'
       style={{ backgroundImage: "url('https://image.freepik.com/vetores-gratis/homem-dirigindo-uma-motocicleta-sobre-um-mapa-de-gps-em-um-telefone-inteligente-servico-de-entrega_211621-33.jpg')", height: 400,width:500,marginRight:"33%"}}
      >
-     
       </div>
-      
        <h1 className="header"> إضافة سائق</h1>
-         <h2 className="sub-header">خاص بشركات ومؤسسات الطباعة والنسخ والتصوير</h2>
-  
-
-    <div className="content">
+       <h2 className="sub-header">  سيتم ربط السائق تلقائيا بجميع طلبات المكتبة  </h2>
+     <div className="content">
  
-
-
-      
       <div className="form">
-
         <div className="form-group">
           <label htmlFor="Name"> الاسم الكامل  </label>
           <input className="form-control" type="text" name="Name" onChange={(e) => setFullName(e.target.value)} />
@@ -67,18 +75,18 @@ function AddDrivers() {
       </div>
     </div>
     <div className="footer">
-      <button type="button" className="btn" style={{fontSize:17}} onClick={handleShow}>
-        التالي
+      <button type="button" className="btn" style={{fontSize:17}} onClick={handleShow, Register}>
+        تسجيل
       </button>
     <Modal show={show} onHide={handleClose}  className='test'> 
         <Modal.Header closeButton>
           <Modal.Title>تهانينا! </Modal.Title>
         </Modal.Header>
-        <Modal.Body>تمت عمليت التسجيل بنجاح, سيتم مراجعة معلوماتك وتفعيل حسابك خلال 24 ساعة </Modal.Body>
+        <Modal.Body> تمت اضافة السائق بنجاح   </Modal.Body>
         <Modal.Footer>
-          <Button variant="success" onClick={handleClose}>
+          <Link to="/PrintShopProfile"><Button variant="success" onClick={handleClose}>
             تم
-          </Button>
+          </Button></Link>
         </Modal.Footer>
       </Modal>
       </div>  

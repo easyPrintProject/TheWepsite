@@ -32,7 +32,7 @@ function OrderActionc() {
       ];
       
        // States ~
-  const [allOrders, setAllOrders] = useState([ ]);
+  const [allOrders, setAllOrders] = useState([]);
   const [items , setitems ] = React.useState([]);
   const [data, setData] = useState(productInfo);
   const [modalInsert, setModalInsert] = useState(false);
@@ -43,6 +43,24 @@ function OrderActionc() {
       noOfPage: "", printType: "",
       description: "", price: ""
   }); 
+
+  useEffect(()=> {
+    if (allOrders!=[] || allOrders!=null){
+       allOrders.forEach(element => {
+        if(element.deliveryStatusId==5){
+          axios.get("https://apieasyprint20210215153907.azurewebsites.net/api/UpdateStatusPrinter/"+element.id)
+          .then(response => {
+              console.log(response.data);
+             }).catch(error => {
+               console.log(error.response)
+           });
+        }
+       });
+     
+
+    }
+
+  }, [allOrders])
 
      useEffect(() => {
         axios.get("https://apieasyprint20210215153907.azurewebsites.net/api/PrinterOrder/a40756b0-a9a9-4079-8495-d44e45b05f5b")
@@ -73,10 +91,7 @@ function OrderActionc() {
     <Container>
       <h1 className="header">إدارة الطلبات</h1>
       <br />
-      {/* <div style={{ height: 400, width: '100%' }}> */}
-      {/* <DataGrid rows={allOrders} columns={columns} pageSize={5}   /> */}
-    {/* </div> */}
-    
+      
       <br /> <br />
       <br /> <br />
 
@@ -130,17 +145,11 @@ function OrderActionc() {
                 <td>{item.isProduct.toString()}</td>
                 <td>{item.description}</td>
                 <td>{item.itemPrice} ريال</td>
-
               </tr>
-
             )
           })}
         </tbody>
               </Table>
-        
-              {/* <button  type="button" className="btn" style={{marginBottom:99, fontSize:15}} onclick={GetInfo(Order.items),handleShow}>
-            المزيد
-            </button> */}
          </td>
             </tr>
 
@@ -149,12 +158,6 @@ function OrderActionc() {
           }
         </tbody>
       </Table>
-
-
-      
-
-   
-
       
     </Container>
     
