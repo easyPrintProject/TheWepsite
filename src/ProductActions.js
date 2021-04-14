@@ -88,7 +88,7 @@ export function ProductActions() {
           </tr>
         </thead>
         <tbody>
-          {allProducts.map((allProducts) => (
+          {allProducts.slice(1).map((allProducts) => (
             <tr style={{fontSize:"18px", textAlign: 'center'}}>
               <td>{allProducts.courceMaterialTitle}</td>
               <td>{allProducts.isAvailable}</td>

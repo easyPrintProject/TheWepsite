@@ -62,6 +62,8 @@ function OrderActionc() {
 
     
       const GetInfo=(e)=>{
+
+
       }
       
 
@@ -103,11 +105,46 @@ function OrderActionc() {
               {Order.customerName}
               </td>
               <td>{Order.total}</td>
-            <td><button  type="button" className="btn" style={{marginBottom:99, fontSize:15}} onclick={GetInfo(Order.id)}>
+            <td>
+
+              <Table>
+              <thead>
+          <tr>
+            <th>رقم المنتج </th>
+            <th>العنوان  </th>
+            <th>طلب منتج </th>
+            <th> طلب خدمة</th>
+            <th>وصف الخدمة </th>
+            <th> السعر النهائي للمنتج </th>
+            <th> </th>
+
+          </tr>
+        </thead>
+        <tbody>
+          {Order.items.map((item)=> {
+            return(
+              <tr>
+                <td>{item.itemID}</td>
+                <td>{item.title}</td>
+                <td>{item.isService.toString()}</td>
+                <td>{item.isProduct.toString()}</td>
+                <td>{item.description}</td>
+                <td>{item.itemPrice} ريال</td>
+
+              </tr>
+
+            )
+          })}
+        </tbody>
+              </Table>
+        
+              {/* <button  type="button" className="btn" style={{marginBottom:99, fontSize:15}} onclick={GetInfo(Order.items),handleShow}>
             المزيد
-            </button>
+            </button> */}
          </td>
             </tr>
+
+            
           )})
           }
         </tbody>
