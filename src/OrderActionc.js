@@ -6,39 +6,17 @@ import { DataGrid } from '@material-ui/data-grid';
 import {  useHistory } from "react-router-dom";
 import {Context} from "./components/Store"
 
-
-const columns = [
-
-    { field: 'Id', headerName: 'ID'},
-    { field: 'itemId', headerName: 'رقم الطلب'},
-    { field: 'orderStatusId', hide:true},
-    { field: 'orderStatus', headerName: 'حالة الطلب', width: 222},
-    { field: 'deliveryStatusId', hide:true},
-    {field: 'deliveryStatus', headerName: 'حالة التوصيل', width: 170},
-    {field: 'orderDate', headerName: 'تاريخ الطلب', width: 170, type:"date"},
-    {field: 'customerId',hide:true},
-    {field: 'customerName', headerName: 'ايميل العميل', width: 170},
-    {field: 'total', headerName: 'الاجمالي', width: 170},
-    {
-      field: '',
-      headerName: 'المزيد',
-      renderCell: () => (
-        <strong>
-          <Button
-            variant="contained"
-            color="primary"
-            size="small"
-            style={{ marginLeft: 16 }}
-          >
-            Open
-          </Button>
-        </strong>
-      ),
-    },
-  ];
   
   
 function OrderActionc() {
+
+
+  //modat states 
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
     const history = useHistory();
     const [state, dispatch] = useContext(Context);
     const productInfo = [
@@ -55,6 +33,7 @@ function OrderActionc() {
       
        // States ~
   const [allOrders, setAllOrders] = useState([ ]);
+  const [items , setitems ] = React.useState([]);
   const [data, setData] = useState(productInfo);
   const [modalInsert, setModalInsert] = useState(false);
   const [modalEdit, setModalEdit] = useState(false);
@@ -79,10 +58,14 @@ function OrderActionc() {
 
       useEffect(() => {
         console.log(allOrders)
-      }, [allOrders]) //will only run when then app component loads
+      }, []) //will only run when then app component loads
 
- 
+    
+      const GetInfo=(e)=>{
 
+
+      }
+      
 
     return (
         <div>
@@ -111,9 +94,10 @@ function OrderActionc() {
           </tr>
         </thead>
         <tbody>
-          {allOrders.map((Order) => (
+          {allOrders.map((Order) => {
+            return(
             <tr style={{fontSize:"18px", textAlign: 'center'}}>
-              <td>{Order.itemId}</td>
+              <td>{Order.id}</td>
               <td>{Order.orderStatus}</td>
               <td Order={{height: '120px' , width: '130px'}}>{Order.deliveryStatus}</td>
               <td>{Order.orderDate}</td>
@@ -121,18 +105,47 @@ function OrderActionc() {
               {Order.customerName}
               </td>
               <td>{Order.total}</td>
-              <td><Button
-            variant="contained"
-            color="primary"
-            size="small"
-            style={{ marginLeft: 16 }}
-          >
-            المزيد
-          </Button></td>
-              
+            <td>
 
+              <Table>
+              <thead>
+          <tr>
+            <th>رقم المنتج </th>
+            <th>العنوان  </th>
+            <th>طلب منتج </th>
+            <th> طلب خدمة</th>
+            <th>وصف الخدمة </th>
+            <th> السعر النهائي للمنتج </th>
+            <th> </th>
+
+          </tr>
+        </thead>
+        <tbody>
+          {Order.items.map((item)=> {
+            return(
+              <tr>
+                <td>{item.itemID}</td>
+                <td>{item.title}</td>
+                <td>{item.isService.toString()}</td>
+                <td>{item.isProduct.toString()}</td>
+                <td>{item.description}</td>
+                <td>{item.itemPrice} ريال</td>
+
+              </tr>
+
+            )
+          })}
+        </tbody>
+              </Table>
+        
+              {/* <button  type="button" className="btn" style={{marginBottom:99, fontSize:15}} onclick={GetInfo(Order.items),handleShow}>
+            المزيد
+            </button> */}
+         </td>
             </tr>
-            ))
+
+            
+          )})
           }
         </tbody>
       </Table>
@@ -144,9 +157,42 @@ function OrderActionc() {
 
       
     </Container>
-            
+    
+      <Modal show={show} onHide={handleClose} className='test'>
+        <Modal.Header closeButton>
+          <Modal.Title> تفاصيل الطلب </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          
+        <Table className="test" style={{fontSize:"19px"}} >
+        <thead>
+          <tr>
+            <th>رقم المنتج</th>
+            <th>وصف المنتج</th>
+            <th>خدمة طباعة</th>
+            <th>طلب منتج</th>
+            <th>السعر</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </Table>
+          
+           </Modal.Body>
+        <Modal.Footer>
+          <button  type="button" className="btn" style={{marginBottom:99, fontSize:15}} onClick={GetInfo,handleShow} >
+            تم
+            </button>
+            <button  type="button" className="btn" style={{marginBottom:99, fontSize:15}} onClick={GetInfo(),handleShow} >
+            تغيير حالة الطلب الى منتهي
+            </button>
+        </Modal.Footer>
+      </Modal>
+
+
         </div>
     )
-}
 
+        }
 export default OrderActionc

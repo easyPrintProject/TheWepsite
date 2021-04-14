@@ -1,10 +1,11 @@
 import React, {createContext, useReducer} from "react";
-import Reducer from "./Reducer"
+import Reducer from "./reducer"
 
 
 const initialState = {
     user:{},
-    error: null
+    error: null,
+    orderId:""
 };
 
 const Store = ({children}) => {

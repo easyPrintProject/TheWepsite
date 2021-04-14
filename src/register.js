@@ -1,4 +1,4 @@
-import './Register.css';
+import "./register.css"; 
 import axios from 'axios';
 import { Link, useHistory } from "react-router-dom";
 import {Context} from "./components/Store"

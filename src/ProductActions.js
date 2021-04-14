@@ -21,18 +21,18 @@ export function ProductActions() {
          price: "32 ريال" },
 
   ];
-  // useEffect(() => {
-  //   axios.get("https://apieasyprint20210215153907.azurewebsites.net/api/CourceMaterial/"+state.user.data.printerId)
-  //    .then(response => {
-  //    console.log(response.data);
-  //     setAllProduct(
-  //      response.data
-  //       );
-  //   }).catch(error => {
-  //     console.log(error.response)
-  // });
-  // }, ) //will only run when then app component loads
- 
+
+  useEffect(() => {
+    axios.get("https://apieasyprint20210215153907.azurewebsites.net/api/CourceMaterial/a40756b0-a9a9-4079-8495-d44e45b05f5b")
+    .then(response => {
+     console.log(response.data);
+      setAllProduct(
+       response.data
+        );
+    }).catch(error => {
+      console.log(error.response)
+  });
+  }, [])
   
   // States ~
 
@@ -88,7 +88,7 @@ export function ProductActions() {
           </tr>
         </thead>
         <tbody>
-          {allProducts.map((allProducts) => (
+          {allProducts.slice(1).map((allProducts) => (
             <tr style={{fontSize:"18px", textAlign: 'center'}}>
               <td>{allProducts.courceMaterialTitle}</td>
               <td>{allProducts.isAvailable}</td>
