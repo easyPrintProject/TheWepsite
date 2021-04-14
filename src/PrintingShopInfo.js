@@ -33,9 +33,9 @@ function PrintingShopInfo() {
   
   
     const PrintingShopInfo = async () => {
-      axios.post("https://apieasyprint20210215153907.azurewebsites.net/api/PrintingShop"+state.user.data.Id, {PrenterName:prenterName, IsCourseMaterial:isCourseMaterial,IsService:isService})
+      axios.post("https://apieasyprint20210215153907.azurewebsites.net/api/PrintingShop",
+       {PrenterName:prenterName, IsCourseMaterial:true,IsService:true, ownerId:state.user.data.id})
       .then(response => {
-        
         history.push("./AdressInfo")
          if (response==true){
           alert("اضغط التالي لاكمال التسجيل") 
@@ -108,7 +108,7 @@ function PrintingShopInfo() {
           <label > هل ترغب بتقديم منتجات مطبوعة جاهزة ؟ </label>
           <input type="checkbox"  onChange={(e) => setisCourseMaterial(e.target.value)}/>
         </div>
-        
+        {console.log(state.user.data.id)}
       </div>
     </div>
     <div className="footer">
